@@ -1,0 +1,6 @@
+@import url('../simple-base.css');
+header { color: #fff; background: #245c89; }
+main { padding-top: 6mm; }
+h2 { color: #245c89; border-bottom: 1px solid #9ab7ce; }
+.title { color: #dceaf5; }
+

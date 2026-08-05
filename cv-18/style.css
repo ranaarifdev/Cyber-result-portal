@@ -1,0 +1,7 @@
+@import url('../simple-base.css');
+.cv-page { color: #202428; }
+header { text-align: center; border-bottom: 2px solid #202428; }
+.contact { justify-content: center; }
+h2 { border-bottom: 1px solid #9ba2a7; }
+.title { color: #555f65; }
+

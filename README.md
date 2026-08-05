@@ -1,6 +1,6 @@
 # Muhammad Arif — Generated CVs
 
-This collection contains 17 distinct one-page CV designs derived from the current visual references. Every design has its own HTML and CSS files.
+This collection contains 22 distinct one-page CV designs. Every design has its own HTML and CSS files.
 
 ## Designs
 
@@ -21,6 +21,11 @@ This collection contains 17 distinct one-page CV designs derived from the curren
 15. **cv-15 — Geometric Gray** (profile layout)
 16. **cv-16 — Dark Software** (sidebar layout)
 17. **cv-17 — Clean Accounting** (traditional layout)
+18. **cv-18 — Minimal Mono** (simple layout)
+19. **cv-19 — Blue Header** (simple layout)
+20. **cv-20 — Compact Rail** (simple layout)
+21. **cv-21 — Soft Green** (simple layout)
+22. **cv-22 — Classic Serif** (simple layout)
 
 ## Open
 

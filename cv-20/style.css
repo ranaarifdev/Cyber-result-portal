@@ -1,0 +1,8 @@
+@import url('../simple-base.css');
+.cv-page { border-left: 18mm solid #263b48; }
+header { padding-left: 10mm; border-bottom: 1px solid #263b48; }
+main { padding-left: 10mm; }
+h2 { color: #263b48; border-left: 3px solid #d19b42; padding-left: 2mm; }
+.title { color: #b27622; }
+.skills { grid-template-columns: repeat(2, 1fr); }
+

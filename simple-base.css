@@ -1,0 +1,35 @@
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #e7eaec; }
+body { padding: 12mm 0; color: #24292d; font-family: Arial, Helvetica, sans-serif; }
+.cv-page { width: 210mm; height: 297mm; margin: auto; overflow: hidden; background: #fff; box-shadow: 0 5px 24px #0002; font-size: 8.2pt; line-height: 1.25; }
+header { padding: 10mm 13mm 6mm; }
+h1 { margin: 0; font-size: 25pt; line-height: 1; letter-spacing: .4px; text-transform: uppercase; font-weight: 300; }
+h1 b { font-weight: 800; }
+.title { margin: 1.5mm 0 2mm; font-size: 10pt; font-weight: 700; }
+.contact { display: flex; flex-wrap: wrap; gap: 2mm 5mm; font-size: 7.5pt; }
+.contact a { color: inherit; text-decoration: none; }
+main { padding: 5mm 13mm 8mm; }
+section { margin: 0 0 2.6mm; }
+h2 { margin: 0 0 1.3mm; padding-bottom: .7mm; font-size: 9.4pt; letter-spacing: .8px; text-transform: uppercase; }
+h3 { margin: 0; font-size: 8.3pt; }
+p { margin: 0 0 1mm; }
+article { margin-bottom: 1.4mm; }
+.row, .split { display: flex; justify-content: space-between; gap: 5mm; }
+.split > section { width: 50%; }
+time { flex: none; font-size: 7.5pt; color: #687078; }
+.minor { margin-bottom: .8mm; }
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7mm 4mm; margin: 0; padding: 0; list-style: none; }
+.skills li::before { content: "•"; margin-right: 1.5mm; }
+.certs { columns: 2; column-gap: 7mm; margin: 0; padding-left: 4mm; }
+.certs li { break-inside: avoid; margin-bottom: .7mm; }
+.compact-list { margin: 0; padding-left: 4mm; }
+.compact-list li { margin-bottom: .5mm; }
+.tags { font-weight: 600; }
+.personal { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6mm 4mm; margin: 0; }
+.personal div { display: flex; gap: 1mm; }
+.personal .wide { grid-column: 1 / -1; }
+.personal dt { font-weight: 700; }
+.personal dd { margin: 0; }
+@media print { html, body { width: 210mm; height: 297mm; background: #fff; } body { padding: 0; } .cv-page { margin: 0; box-shadow: none; page-break-inside: avoid; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+

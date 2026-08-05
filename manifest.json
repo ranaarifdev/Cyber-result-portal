@@ -125,6 +125,41 @@
       "layout": "traditional",
       "html": "cv-17/index.html",
       "css": "cv-17/style.css"
+    },
+    {
+      "id": "cv-18",
+      "name": "Minimal Mono",
+      "layout": "simple",
+      "html": "cv-18/index.html",
+      "css": "cv-18/style.css"
+    },
+    {
+      "id": "cv-19",
+      "name": "Blue Header",
+      "layout": "simple",
+      "html": "cv-19/index.html",
+      "css": "cv-19/style.css"
+    },
+    {
+      "id": "cv-20",
+      "name": "Compact Rail",
+      "layout": "simple",
+      "html": "cv-20/index.html",
+      "css": "cv-20/style.css"
+    },
+    {
+      "id": "cv-21",
+      "name": "Soft Green",
+      "layout": "simple",
+      "html": "cv-21/index.html",
+      "css": "cv-21/style.css"
+    },
+    {
+      "id": "cv-22",
+      "name": "Classic Serif",
+      "layout": "simple",
+      "html": "cv-22/index.html",
+      "css": "cv-22/style.css"
     }
   ]
 }

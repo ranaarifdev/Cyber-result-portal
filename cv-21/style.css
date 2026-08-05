@@ -1,0 +1,7 @@
+@import url('../simple-base.css');
+.cv-page { color: #25342e; }
+header { background: #e2f0e8; border-bottom: 2px solid #5f9478; }
+h2 { color: #397058; border-bottom: 1px solid #a6c9b7; }
+.title { color: #397058; }
+.certs li::marker, .skills li::before { color: #5f9478; }
+
