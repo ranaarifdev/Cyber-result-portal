@@ -170,6 +170,11 @@
     {"id":"cv-29","name":"Blue Bar","layout":"simple","html":"cv-29/index.html","css":"simple-nophoto.css"},
     {"id":"cv-30","name":"Green Grid","layout":"simple","html":"cv-30/index.html","css":"simple-nophoto.css"},
     {"id":"cv-31","name":"Warm Serif","layout":"simple","html":"cv-31/index.html","css":"simple-nophoto.css"},
-    {"id":"cv-32","name":"Gray Modern","layout":"simple","html":"cv-32/index.html","css":"simple-nophoto.css"}
+    {"id":"cv-32","name":"Gray Modern","layout":"simple","html":"cv-32/index.html","css":"simple-nophoto.css"},
+    {"id":"cv-33","name":"Ink Divider","layout":"simple","html":"cv-33/index.html","css":"simple-nophoto-2.css"},
+    {"id":"cv-34","name":"Cyan Boxes","layout":"simple","html":"cv-34/index.html","css":"simple-nophoto-2.css"},
+    {"id":"cv-35","name":"Olive Classic","layout":"simple","html":"cv-35/index.html","css":"simple-nophoto-2.css"},
+    {"id":"cv-36","name":"Burgundy Bar","layout":"simple","html":"cv-36/index.html","css":"simple-nophoto-2.css"},
+    {"id":"cv-37","name":"Black & White","layout":"simple","html":"cv-37/index.html","css":"simple-nophoto-2.css"}
   ]
 }
