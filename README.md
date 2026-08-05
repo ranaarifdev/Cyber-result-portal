@@ -1,6 +1,6 @@
 # Muhammad Arif — Generated CVs
 
-This collection contains 22 distinct one-page CV designs. Every design has its own HTML and CSS files.
+This collection contains 27 distinct one-page CV designs, including five simple and five professional additions.
 
 ## Designs
 
@@ -26,6 +26,11 @@ This collection contains 22 distinct one-page CV designs. Every design has its o
 20. **cv-20 — Compact Rail** (simple layout)
 21. **cv-21 — Soft Green** (simple layout)
 22. **cv-22 — Classic Serif** (simple layout)
+23. **cv-23 — Professional Teal** (professional layout)
+24. **cv-24 — Professional Navy** (professional layout)
+25. **cv-25 — Professional Plum** (professional layout)
+26. **cv-26 — Professional Charcoal** (professional layout)
+27. **cv-27 — Professional Gold** (professional layout)
 
 ## Open
 

@@ -160,6 +160,11 @@
       "layout": "simple",
       "html": "cv-22/index.html",
       "css": "cv-22/style.css"
-    }
+    },
+    {"id":"cv-23","name":"Professional Teal","layout":"professional","html":"cv-23/index.html","css":"professional-cv.css"},
+    {"id":"cv-24","name":"Professional Navy","layout":"professional","html":"cv-24/index.html","css":"professional-cv.css"},
+    {"id":"cv-25","name":"Professional Plum","layout":"professional","html":"cv-25/index.html","css":"professional-cv.css"},
+    {"id":"cv-26","name":"Professional Charcoal","layout":"professional","html":"cv-26/index.html","css":"professional-cv.css"},
+    {"id":"cv-27","name":"Professional Gold","layout":"professional","html":"cv-27/index.html","css":"professional-cv.css"}
   ]
 }
