@@ -47,7 +47,7 @@ This collection contains 40 distinct one-page CV designs, including simple, prof
 
 ## Open
 
-Open `preview.html` in a browser and select a design, or open any `cv-XX/index.html` directly.
+Open `index.html` in a browser and select a design, or open any `cv-XX/index.html` directly.
 
 ## Print or save as PDF
 
