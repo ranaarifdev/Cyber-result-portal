@@ -1,6 +1,6 @@
 # Muhammad Arif — Generated CVs
 
-This collection contains 37 distinct one-page CV designs, including simple, professional, and photo-free formats.
+This collection contains 40 distinct one-page CV designs, including simple, professional, photo-free, and student formats.
 
 ## Designs
 
@@ -41,6 +41,9 @@ This collection contains 37 distinct one-page CV designs, including simple, prof
 35. **cv-35 — Olive Classic** (simple, no-photo layout)
 36. **cv-36 — Burgundy Bar** (simple, no-photo layout)
 37. **cv-37 — Black & White** (simple, no-photo layout)
+38. **cv-38 — Student Paper** (student, no-photo layout)
+39. **cv-39 — Student Blue** (student, no-photo layout)
+40. **cv-40 — Student Mono** (student, no-photo layout)
 
 ## Open
 

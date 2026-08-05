@@ -175,6 +175,9 @@
     {"id":"cv-34","name":"Cyan Boxes","layout":"simple","html":"cv-34/index.html","css":"simple-nophoto-2.css"},
     {"id":"cv-35","name":"Olive Classic","layout":"simple","html":"cv-35/index.html","css":"simple-nophoto-2.css"},
     {"id":"cv-36","name":"Burgundy Bar","layout":"simple","html":"cv-36/index.html","css":"simple-nophoto-2.css"},
-    {"id":"cv-37","name":"Black & White","layout":"simple","html":"cv-37/index.html","css":"simple-nophoto-2.css"}
+    {"id":"cv-37","name":"Black & White","layout":"simple","html":"cv-37/index.html","css":"simple-nophoto-2.css"},
+    {"id":"cv-38","name":"Student Paper","layout":"student","html":"cv-38/index.html","css":"student-cv.css"},
+    {"id":"cv-39","name":"Student Blue","layout":"student","html":"cv-39/index.html","css":"student-cv.css"},
+    {"id":"cv-40","name":"Student Mono","layout":"student","html":"cv-40/index.html","css":"student-cv.css"}
   ]
 }

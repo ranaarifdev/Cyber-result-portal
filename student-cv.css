@@ -1,0 +1,10 @@
+@import url('./simple-nophoto.css');
+
+/* A quiet academic layout with a centered identity block. */
+.student-paper{--accent:#30475e;--soft:#f6f8fa}.student-paper header{text-align:center;padding-top:13mm}.student-paper .contact{justify-content:center}.student-paper .content{grid-template-columns:64mm 1fr}.student-paper h2{font-size:9.5pt;letter-spacing:1.5px}.student-paper .skill-list li{padding-left:0;border:0;border-bottom:1px solid #dce2e6;background:transparent}
+
+/* A friendly blue notebook-inspired layout. */
+.student-blue{--accent:#356b91;--soft:#eef5f9}.student-blue header{padding-left:18mm;background:#f8fbfd;border-bottom:3px solid var(--accent)}.student-blue .content{grid-template-columns:70mm 1fr}.student-blue aside{border-right:1px solid #cbdce7}.student-blue h2{border-bottom:2px solid var(--accent)}.student-blue .skill-list li{border-left:3px solid var(--accent);background:#fff}
+
+/* A minimal monochrome layout designed for economical printing. */
+.student-mono{--accent:#222;--soft:#fff}.student-mono header{padding:14mm 17mm 9mm;border-top:5mm solid #222;border-bottom:1px solid #222}.student-mono .eyebrow{display:none}.student-mono h1{font-size:26pt}.student-mono .content{grid-template-columns:60mm 1fr}.student-mono aside{border-right:1px solid #222}.student-mono h2{color:#222;border-bottom:1px solid #222;font-size:9pt}.student-mono .skill-list li{padding:0 0 1mm;border:0;background:#fff}.student-mono .skill-list li::before{content:'•';margin-right:2mm}
