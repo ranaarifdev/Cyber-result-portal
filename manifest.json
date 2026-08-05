@@ -165,6 +165,11 @@
     {"id":"cv-24","name":"Professional Navy","layout":"professional","html":"cv-24/index.html","css":"professional-cv.css"},
     {"id":"cv-25","name":"Professional Plum","layout":"professional","html":"cv-25/index.html","css":"professional-cv.css"},
     {"id":"cv-26","name":"Professional Charcoal","layout":"professional","html":"cv-26/index.html","css":"professional-cv.css"},
-    {"id":"cv-27","name":"Professional Gold","layout":"professional","html":"cv-27/index.html","css":"professional-cv.css"}
+    {"id":"cv-27","name":"Professional Gold","layout":"professional","html":"cv-27/index.html","css":"professional-cv.css"},
+    {"id":"cv-28","name":"Clean Line","layout":"simple","html":"cv-28/index.html","css":"simple-nophoto.css"},
+    {"id":"cv-29","name":"Blue Bar","layout":"simple","html":"cv-29/index.html","css":"simple-nophoto.css"},
+    {"id":"cv-30","name":"Green Grid","layout":"simple","html":"cv-30/index.html","css":"simple-nophoto.css"},
+    {"id":"cv-31","name":"Warm Serif","layout":"simple","html":"cv-31/index.html","css":"simple-nophoto.css"},
+    {"id":"cv-32","name":"Gray Modern","layout":"simple","html":"cv-32/index.html","css":"simple-nophoto.css"}
   ]
 }
