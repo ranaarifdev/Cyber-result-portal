@@ -1,72 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rana Arif | Personal Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transcript - Muhammad Arif</title>
+
+  <style>
+    /* Reset and Typography */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eee;
+    }
+
+    /* A4 Page Setup */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 10mm auto;
+      background: #fff;
+      padding: 20mm;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 10px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    .header p {
+      margin: 4px 0;
+      font-size: 16px;
+    }
+
+    /* Title of Semester */
+    .semester-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 15px 0;
+      text-decoration: underline;
+    }
+
+    /* Academic Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      font-size: 16px;
+      text-align: center;
+    }
+    th {
+      background: #f2f2f2;
+    }
+
+    /* Summary Results Box */
+    .summary {
+      margin-top: 25px;
+      padding: 15px;
+      border: 1.2px solid #000;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Footer Signatures - Fixed to Bottom */
+    .footer {
+      position: absolute;
+      bottom: 24mm;
+      left: 19mm;
+      right: 19mm;
+      display: flex;
+      justify-content: space-between;
+    }
+    .sign {
+      width: 210px;
+      text-align: center;
+    }
+    .line {
+      border-top: 1px solid #000;
+      margin-top: 50px;
+      padding-top: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .disclaimer {
+      position: absolute;
+      bottom: 20mm;
+      width: calc(100% - 50mm);
+      text-align: center;
+      font-size: 11px;
+      font-style: italic;
+    }
+
+    /* Print Logic */
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Rana Arif</h1>
-    <p>Cybersecurity Student | App Developer | Tech Enthusiast</p>
-  </header>
-  <section style="text-align:center;">
-    <img src="rana.jpg" alt="Rana Arif" style="width:200px; border-radius: 50%; margin-top: 20px;" />
-  </section>
-  
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am Rana Arif, a passionate cybersecurity student at Emerson University, Multan.
-        I am known for my programming skills, problem-solving, and my love for creating apps. 
-        I’ve built projects like a PDF Scanner, CGPA Calculator, Chatbot, and more. I also participate in
-        hackathons and tech meetups, and I enjoy mentoring other students.
-      </p>
-    </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>🎓 Matriculation: Govt. Higher Secondary School, Raja Ram</li>
-        <li>🎓 FSc Pre-Medical: Govt. Higher Secondary School, Raja Ram</li>
-        <li>🎓 BS Cybersecurity (Evening), Emerson University Multan – 4th Semester</li>
-      </ul>
-    </section>
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Transcript of Academic Record</strong></p>
+      <p>Programme: BS Cyber Security (Evening) | Session: 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif | <strong>Roll No:</strong> ECTE231122145</p>
+    </div>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>📄 PDF Scanner App</li>
-        <li>📊 CGPA Calculator</li>
-        <li>🤖 Student Database</li>
-        <li>🔐 point to time Calculator app</li>
-        <li>📥 Document Upload & Download App</li>
-      </ul>
-    </section>
+    <div class="semester-title">1st Semester</div>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>✔️ Android App Development (Kotlin + Jetpack Compose)</li>
-        <li>✔️ HTML, CSS, JavaScript</li>
-        <li>✔️ Cybersecurity Basics</li>
-        <li>✔️ Git & GitHub</li>
-        <li>✔️ Problem Solving & Debugging</li>
-      </ul>
-    </section>
+    <table>
+      <thead>
+        <tr><th>Course Code</th><th>Marks (Grade Points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CS-103</td><td>3.40</td></tr>
+        <tr><td>IT-101</td><td>3.10</td></tr>
+        <tr><td>EG-109</td><td>3.60</td></tr>
+        <tr><td>COSC-1203</td><td>3.30</td></tr>
+        <tr><td>IT-201</td><td>3.50</td></tr>
+        <tr><td>MZ-111</td><td>3.00</td></tr>
+      </tbody>
+    </table>
 
-    <section>
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> ranaarif@example.com</p>
-      <p><strong>Phone:</strong> +92 306 0830941</p>
-      <p><strong>Location:</strong> Village, District Multan, Pakistan</p>
-    </section>
-  </main>
+    <div class="summary">
+      SGPA: <strong>3.38</strong> | CGPA: <strong>3.38</strong> | Remarks: <strong>Promoted</strong>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Rana Arif. All rights reserved.</p>
-  </footer>
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">Note: This is a computer-generated provisional record.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Transcript of Academic Record</strong></p>
+      <p>Programme: BS Cyber Security (Evening) | Session: 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif | <strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">2nd Semester</div>
+
+    <table>
+      <thead>
+        <tr><th>Course Code</th><th>Marks (Grade Points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>IT-102</td><td>3.40</td></tr>
+        <tr><td>EG-105</td><td>4.00</td></tr>
+        <tr><td>IT-207</td><td>3.30</td></tr>
+        <tr><td>MT-108</td><td>2.00</td></tr>
+        <tr><td>IT-301</td><td>3.40</td></tr>
+        <tr><td>MZ-112</td><td>3.30</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      SGPA: <strong>3.24</strong> | CGPA: <strong>3.31</strong> | Remarks: <strong>Promoted</strong>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">Note: This is a computer-generated provisional record.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Transcript of Academic Record</strong></p>
+      <p>Programme: BS Cyber Security (Evening) | Session: 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif | <strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">3rd Semester</div>
+
+    <table>
+      <thead>
+        <tr><th>Course Code</th><th>Marks (Grade Points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-2106</td><td>4.00</td></tr>
+        <tr><td>COSC-2206</td><td>4.00</td></tr>
+        <tr><td>COSC-2111</td><td>3.90</td></tr>
+        <tr><td>COSC-2211</td><td>4.00</td></tr>
+        <tr><td>COSC-2116</td><td>4.00</td></tr>
+        <tr><td>CYSE-2131</td><td>3.70</td></tr>
+        <tr><td>CYSE-2231</td><td>4.00</td></tr>
+        <tr><td>PHYS-1103</td><td>4.00</td></tr>
+        <tr><td>PHYS-1203</td><td>4.00</td></tr>
+        <tr><td>SOCI-2101</td><td>4.00</td></tr>
+        <tr><td>POSC-1101</td><td>2.80</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      SGPA: <strong>3.83</strong> | CGPA: <strong>3.50</strong> | Remarks: <strong>Promoted</strong>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">Note: This is a computer-generated provisional record.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Transcript of Academic Record</strong></p>
+      <p>Programme: BS Cyber Security (Evening) | Session: 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif | <strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">4th Semester</div>
+
+    <table>
+      <thead>
+        <tr><th>Course Code</th><th>Marks (Grade Points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-2109</td><td>3.50</td></tr>
+        <tr><td>COSC-2209</td><td>3.70</td></tr>
+        <tr><td>COSC-2108</td><td>2.00</td></tr>
+        <tr><td>COSC-2208</td><td>2.00</td></tr>
+        <tr><td>COSC-2107</td><td>2.00</td></tr>
+        <tr><td>COSC-2207</td><td>2.70</td></tr>
+        <tr><td>BUAD-2101</td><td>3.70</td></tr>
+        <tr><td>STAT-2101</td><td>4.00</td></tr>
+        <tr><td>BUAD-1121</td><td>2.50</td></tr>
+        <tr><td>ISST-1101</td><td>4.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      SGPA: <strong>3.01</strong> | CGPA: <strong>3.36</strong> | Remarks: <strong>Promoted</strong>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">Note: This is a computer-generated provisional record.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Transcript of Academic Record</strong></p>
+      <p>Programme: BS Cyber Security (Evening) | Session: 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif | <strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">5th Semester</div>
+
+    <table>
+      <thead>
+        <tr><th>Course Code</th><th>Marks (Grade Points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-3112</td><td>2.10</td></tr>
+        <tr><td>COSC-3212</td><td>3.00</td></tr>
+        <tr><td>CYSE-3133</td><td>3.70</td></tr>
+        <tr><td>CYSE-3233</td><td>3.70</td></tr>
+        <tr><td>CYSE-3143</td><td>2.70</td></tr>
+        <tr><td>CYSE-3243</td><td>3.00</td></tr>
+        <tr><td>CYSE-3132</td><td>2.70</td></tr>
+        <tr><td>CYSE-3232</td><td>2.80</td></tr>
+        <tr><td>MATH-3182</td><td>4.00</td></tr>
+        <tr><td>CYSE-3141</td><td>3.60</td></tr>
+        <tr><td>ARAB-3101</td><td>4.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      SGPA: <strong>3.21</strong> | CGPA: <strong>3.29</strong> | Remarks: <strong>Promoted</strong>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">Note: This is a computer-generated provisional record.</div>
+  </div>
+
 </body>
 </html>

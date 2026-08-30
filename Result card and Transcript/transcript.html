@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academic Transcript - Muhammad Arif</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #d9d9d9;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .sheet {
+      position: relative;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 10mm auto;
+      padding: 10mm 11mm 9mm;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
+    }
+    .sheet::after {
+      content: "EMERSON UNIVERSITY MULTAN";
+      position: absolute;
+      top: 51%;
+      left: 50%;
+      color: rgba(70, 70, 70, .035);
+      font: 700 19mm/1 Georgia, serif;
+      white-space: nowrap;
+      transform: translate(-50%, -50%) rotate(-38deg);
+      pointer-events: none;
+    }
+    .header, .student, .semesters, .final, .notes, .signature { position: relative; z-index: 1; }
+    .header {
+      min-height: 34mm;
+      padding: 1mm 28mm 0;
+      text-align: center;
+    }
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25mm;
+      height: 25mm;
+      object-fit: contain;
+    }
+    .photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22mm;
+      height: 27mm;
+      border: 1px solid #555;
+      object-fit: cover;
+      object-position: center top;
+    }
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      text-transform: uppercase;
+    }
+    .department { margin: 3px 0; font-size: 13px; font-weight: 700; }
+    h2 {
+      display: inline-block;
+      margin: 6px 0 0;
+      border-bottom: 1px solid #111;
+      font: 700 18px/1.1 Georgia, "Times New Roman", serif;
+    }
+    .program { margin: 8px 0 2px; font-size: 11px; font-weight: 700; }
+    .student {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 18mm;
+      margin: 2mm 0 3mm;
+      padding: 2mm 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      font-size: 10px;
+    }
+    .field { display: grid; grid-template-columns: 25mm 1fr; }
+    .field strong { font-weight: 700; }
+    .semesters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2mm;
+    }
+    .column { min-width: 0; }
+    .semester { margin-bottom: 2mm; break-inside: avoid; }
+    .semester h3 {
+      margin: 0;
+      padding: 2px 4px;
+      border: 1px solid #222;
+      border-bottom: 0;
+      background: #eee;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td {
+      padding: 2px 3px;
+      border-right: 1px solid #888;
+      border-bottom: 1px solid #aaa;
+      font-size: 7.5px;
+      line-height: 1.15;
+      vertical-align: top;
+    }
+    th:first-child, td:first-child { border-left: 1px solid #888; }
+    th { border-top: 1px solid #222; background: #f7f7f7; font-weight: 700; }
+    th:nth-child(1) { width: 23%; }
+    th:nth-child(2) { width: 63%; }
+    th:nth-child(3) { width: 14%; }
+    td:last-child { text-align: center; font-weight: 700; }
+    .sgpa {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 5px;
+      border: 1px solid #222;
+      border-top: 0;
+      font-size: 8.5px;
+      font-weight: 700;
+    }
+    .final {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 1mm;
+      border: 1.5px solid #111;
+    }
+    .final div { padding: 4px 6px; border-right: 1px solid #555; font-size: 9px; text-align: center; }
+    .final div:last-child { border-right: 0; }
+    .notes { margin-top: 2mm; font-size: 7.5px; line-height: 1.35; text-align: center; }
+    .signature {
+      width: 62mm;
+      margin: 13mm 0 0 auto;
+      border-top: 1px solid #111;
+      padding-top: 3px;
+      font: 700 10px/1.25 Georgia, "Times New Roman", serif;
+      text-align: center;
+    }
+    @media screen and (max-width: 800px) {
+      .sheet { width: auto; min-height: 0; margin: 10px; padding: 20px 12px; }
+      .header { padding-right: 80px; padding-left: 80px; }
+      .student { grid-template-columns: 1fr; gap: 4px; }
+      .semesters { grid-template-columns: 1fr; }
+      th, td { font-size: 9px; }
+      .final { grid-template-columns: 1fr 1fr; }
+      .final div:nth-child(2) { border-right: 0; }
+      .final div:nth-child(-n+2) { border-bottom: 1px solid #555; }
+    }
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .sheet { width: 210mm; height: 297mm; min-height: 297mm; margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="header">
+      <img class="logo" src="University logo.jpg" alt="Emerson University Multan logo" />
+      <img class="photo" src="student picture.jpg" alt="Muhammad Arif" />
+      <h1>Emerson University Multan</h1>
+      <p class="department">Department of Computing &amp; Emerging Technology</p>
+      <h2>Transcript</h2>
+      <p class="program">BS Cyber Security (Evening) &nbsp; | &nbsp; Session: 2023-2027</p>
+    </header>
+
+    <section class="student" aria-label="Student details">
+      <div class="field"><strong>Name:</strong><span>Muhammad Arif</span></div>
+      <div class="field"><strong>Roll No:</strong><span>ECTE231122145</span></div>
+    </section>
+
+    <section class="semesters" aria-label="Semester results">
+      <div class="column">
+        <article class="semester">
+          <h3>Semester: I</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>CS-103</td><td>Programming Fundamentals</td><td>3.40</td></tr>
+            <tr><td>IT-101</td><td>Application of Information &amp; Communication Technologies (ICT)</td><td>3.10</td></tr>
+            <tr><td>EG-109</td><td>Functional English</td><td>3.60</td></tr>
+            <tr><td>COSC-1203</td><td>Object Oriented Programming (Lab)</td><td>3.30</td></tr>
+            <tr><td>IT-201</td><td>Expository Writing</td><td>3.50</td></tr>
+            <tr><td>MZ-111</td><td>Zero Math</td><td>3.00</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.38</span><span>CGPA: &mdash;</span><span>Percentage: 84.50%</span></div>
+        </article>
+
+        <article class="semester">
+          <h3>Semester: III</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>COSC-2106</td><td>Data Structures</td><td>4.00</td></tr>
+            <tr><td>COSC-2206</td><td>Data Structures (Lab)</td><td>4.00</td></tr>
+            <tr><td>COSC-2111</td><td>Computer Organization &amp; Assembly Language</td><td>3.90</td></tr>
+            <tr><td>COSC-2211</td><td>Computer Organization &amp; Assembly Language (Lab)</td><td>4.00</td></tr>
+            <tr><td>COSC-2116</td><td>Professional Practices (Arts &amp; Humanities)</td><td>4.00</td></tr>
+            <tr><td>CYSE-2131</td><td>Cyber Security</td><td>3.70</td></tr>
+            <tr><td>CYSE-2231</td><td>Cyber Security (Lab)</td><td>4.00</td></tr>
+            <tr><td>PHYS-1103</td><td>Applied Physics (Natural Sciences)</td><td>4.00</td></tr>
+            <tr><td>PHYS-1203</td><td>Applied Physics (Natural Sciences) (Lab)</td><td>4.00</td></tr>
+            <tr><td>SOCI-2101</td><td>Civics and Community Engagement</td><td>4.00</td></tr>
+            <tr><td>POSC-1101</td><td>Ideology &amp; Constitution of Pakistan</td><td>2.80</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.83</span><span>CGPA: 3.50</span><span>Percentage: 95.75%</span></div>
+        </article>
+
+        <article class="semester">
+          <h3>Semester: V</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>COSC-3112</td><td>Operating Systems</td><td>2.10</td></tr>
+            <tr><td>COSC-3212</td><td>Operating Systems (Lab)</td><td>3.00</td></tr>
+            <tr><td>CYSE-3133</td><td>Network Security</td><td>3.70</td></tr>
+            <tr><td>CYSE-3233</td><td>Network Security (Lab)</td><td>3.70</td></tr>
+            <tr><td>CYSE-3143</td><td>Hardware Security</td><td>2.70</td></tr>
+            <tr><td>CYSE-3243</td><td>Hardware Security (Lab)</td><td>3.00</td></tr>
+            <tr><td>CYSE-3132</td><td>Information Assurance</td><td>2.70</td></tr>
+            <tr><td>CYSE-3232</td><td>Information Assurance (Lab)</td><td>2.80</td></tr>
+            <tr><td>MATH-3182</td><td>Linear Algebra</td><td>4.00</td></tr>
+            <tr><td>CYSE-3141</td><td>Vulnerability Assessment &amp; Reverse Engineering</td><td>3.60</td></tr>
+            <tr><td>ARAB-3101</td><td>Arabic / University Elective</td><td>4.00</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.21</span><span>CGPA: 3.36</span><span>Percentage: 80.25%</span></div>
+        </article>
+      </div>
+
+      <div class="column">
+        <article class="semester">
+          <h3>Semester: II</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>IT-102</td><td>Database Systems</td><td>3.40</td></tr>
+            <tr><td>EG-105</td><td>Digital Logic Design</td><td>4.00</td></tr>
+            <tr><td>IT-207</td><td>Programming-related Course</td><td>3.30</td></tr>
+            <tr><td>MT-108</td><td>Mathematics</td><td>2.00</td></tr>
+            <tr><td>IT-301</td><td>Information Technology Course</td><td>3.40</td></tr>
+            <tr><td>MZ-112</td><td>Zero Math</td><td>3.30</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.24</span><span>CGPA: 3.31</span><span>Percentage: 81.00%</span></div>
+        </article>
+
+        <article class="semester">
+          <h3>Semester: IV</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>COSC-2109</td><td>Computer Networks</td><td>3.50</td></tr>
+            <tr><td>COSC-2209</td><td>Computer Networks (Lab)</td><td>3.70</td></tr>
+            <tr><td>COSC-2108</td><td>Artificial Intelligence</td><td>2.00</td></tr>
+            <tr><td>COSC-2208</td><td>Artificial Intelligence (Lab)</td><td>2.00</td></tr>
+            <tr><td>COSC-2107</td><td>Information Security</td><td>2.00</td></tr>
+            <tr><td>COSC-2207</td><td>Information Security (Lab)</td><td>2.70</td></tr>
+            <tr><td>BUAD-2101</td><td>Entrepreneurship</td><td>3.70</td></tr>
+            <tr><td>STAT-2101</td><td>Calculus &amp; Analytic Geometry</td><td>4.00</td></tr>
+            <tr><td>BUAD-1121</td><td>Principles of Management</td><td>2.50</td></tr>
+            <tr><td>ISST-1101</td><td>Islamic Studies / Ethics</td><td>4.00</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.40</span><span>CGPA: 3.10</span><span>Percentage: 85.00%</span></div>
+        </article>
+
+        <article class="semester">
+          <h3>Semester: VI</h3>
+          <table><thead><tr><th>Course Code</th><th>Course Title</th><th>GPA</th></tr></thead><tbody>
+            <tr><td>CYSE-3145</td><td>Wireless and Mobile Security</td><td>3.30</td></tr>
+            <tr><td>CYSE-3245</td><td>Wireless and Mobile Security (Lab)</td><td>3.20</td></tr>
+            <tr><td>CYSE-3134</td><td>Secure Software Design and Development</td><td>2.70</td></tr>
+            <tr><td>CYSE-3234</td><td>Secure Software Design and Development (Lab)</td><td>3.10</td></tr>
+            <tr><td>CYSE-3147</td><td>HCI &amp; Computer Graphics</td><td>2.70</td></tr>
+            <tr><td>CYSE-3247</td><td>HCI &amp; Computer Graphics (Lab)</td><td>3.30</td></tr>
+            <tr><td>BUAD-2123</td><td>Principles of Marketing</td><td>2.90</td></tr>
+            <tr><td>MATH-3181</td><td>Multivariable Calculus</td><td>3.30</td></tr>
+            <tr><td>ENGL-3184</td><td>Technical &amp; Business Writing</td><td>3.30</td></tr>
+          </tbody></table><div class="sgpa"><span>SGPA: 3.08</span><span>CGPA: 3.31</span><span>Percentage: 77.00%</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="final" aria-label="Final summary">
+      <div><strong>Semesters:</strong> 6</div>
+      <div><strong>Latest CGPA:</strong> 3.31 / 4.00 (82.75%)</div>
+      <div><strong>Status:</strong> Promoted</div>
+      <div><strong>Programme:</strong> BS Cyber Security</div>
+    </section>
+    <p class="notes">GPA = Grade Point Average &nbsp; | &nbsp; CGPA = Cumulative Grade Point Average<br />This is a computer-generated academic transcript based on the available semester results.</p>
+    <div class="signature">Controller of Examinations</div>
+  </main>
+</body>
+</html>

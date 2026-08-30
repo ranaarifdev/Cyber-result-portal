@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transcript - Muhammad Arif</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-light: #243f5b;
+      --gold: #c89b3c;
+      --ink: #1b2733;
+      --muted: #607080;
+      --line: #d6dee6;
+      --surface: #f5f8fb;
+      --success: #1f7a4d;
+      --gold-soft: #f4ead2;
+      --shadow: 0 18px 48px rgba(16, 42, 67, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 1px 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #f8fafc 0, #e9eef3 48%, #dfe7ee 100%);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      max-width: calc(100% - 24px);
+      margin: 10mm auto;
+      background: #fff;
+      padding: 16mm 18mm 14mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-top: 7px solid var(--navy);
+      outline: 1px solid rgba(16, 42, 67, 0.06);
+      box-shadow: var(--shadow);
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold);
+    }
+    .page::after {
+      content: "ACADEMIC RECORD";
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      z-index: 0;
+      color: rgba(16, 42, 67, 0.035);
+      font: 700 25mm/1 Georgia, "Times New Roman", serif;
+      letter-spacing: 3mm;
+      white-space: nowrap;
+      transform: translate(-50%, -50%) rotate(-32deg);
+      pointer-events: none;
+    }
+    .page > * { position: relative; z-index: 1; }
+
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 4mm 5mm 5mm;
+      border-bottom: 2px solid var(--gold);
+      background: linear-gradient(180deg, rgba(245, 248, 251, 0.72), rgba(255, 255, 255, 0));
+    }
+    .header::before {
+      content: "ORIGINAL \2022  COMPUTER GENERATED";
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border: 1px solid rgba(200, 155, 60, 0.55);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #795b1d;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .header h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .header p {
+      margin: 5px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .header p:nth-of-type(2) {
+      margin: 12px 0 9px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+    .header p:nth-of-type(3),
+    .header p:nth-of-type(4) {
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .semester-title {
+      align-self: center;
+      margin: 3px 0 13px;
+      padding: 7px 22px;
+      border: 1px solid #cbd7e2;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fff, var(--surface));
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 7px rgba(16, 42, 67, 0.07);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+    }
+    th, td {
+      padding: 7px 9px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+    th {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: .55px;
+      text-transform: uppercase;
+    }
+    th:first-child { width: 22%; }
+    th:last-child { width: 18%; }
+    tbody tr:nth-child(even) { background: var(--surface); }
+    tbody tr { transition: background-color .15s ease; }
+    tbody tr:hover { background: var(--gold-soft); }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody td:first-child {
+      color: var(--navy);
+      font-weight: 700;
+    }
+    tbody td:nth-child(2) {
+      text-align: left;
+    }
+    tbody td:last-child {
+      color: var(--navy-light);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #f8fafc);
+      box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+    }
+    .metric {
+      min-width: 120px;
+      padding: 9px 16px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+    }
+    .metric:last-child { border-right: 0; }
+    .metric span {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+    .metric strong {
+      color: var(--navy);
+      font-size: 15px;
+    }
+    .metric.status strong { color: var(--success); }
+
+    .metric.status strong::before {
+      content: "\2713";
+      margin-right: 5px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: auto;
+      padding-top: 14mm;
+    }
+    .sign {
+      width: 210px;
+      max-width: 45%;
+      text-align: center;
+    }
+    .line {
+      margin-top: 34px;
+      padding-top: 6px;
+      border-top: 1px solid #718096;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+    .line::before {
+      content: "Authorized Signature";
+      display: block;
+      margin: -24px 0 9px;
+      color: #8a98a6;
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: .45px;
+      text-transform: uppercase;
+    }
+
+    .disclaimer {
+      width: 100%;
+      margin-top: 8px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 9px;
+      font-style: italic;
+    }
+
+    /* Formal report-card layout based on the supplied reference */
+    .page {
+      padding: 12mm 28mm 12mm;
+      border: 0;
+      border-top: 0;
+      outline: 0;
+      color: #111;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, .14);
+    }
+    .page::before {
+      top: 12mm;
+      left: 28mm;
+      right: auto;
+      width: 26mm;
+      height: 26mm;
+      border: 0;
+      border-radius: 0;
+      background: #fff url("University logo.jpg") center / contain no-repeat;
+      content: "";
+      transform: none;
+    }
+    .page::after {
+      top: 47mm;
+      right: 28mm;
+      left: auto;
+      width: 27mm;
+      height: 34mm;
+      border: 1px solid #333;
+      background: #fff url("student picture.jpg") center top / cover no-repeat;
+      content: "";
+      transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header {
+      min-height: 68mm;
+      margin: 0 0 7px;
+      padding: 3mm 32mm 4mm 25mm;
+      border-bottom: 0;
+      background: none;
+    }
+    .header::before {
+      display: none;
+    }
+    .header h1 {
+      color: #7c1735;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      letter-spacing: .8px;
+      text-shadow: none;
+    }
+    .header p {
+      margin: 4px 0;
+      color: #111;
+      font-size: 11px;
+    }
+    .header p:first-of-type {
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+    .header p:nth-of-type(2) {
+      display: inline-block;
+      margin: 8px 0 14px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #222;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+    .header p:nth-of-type(3),
+    .header p:nth-of-type(4) {
+      margin-left: -25mm;
+      margin-right: 10mm;
+      padding: 4px 0;
+      border-bottom: 0;
+      color: #111;
+      font-size: 15px;
+      line-height: 1.45;
+      text-align: left;
+    }
+    .semester-title {
+      align-self: stretch;
+      margin: 0 0 8px;
+      padding: 5px 0;
+      border: 0;
+      border-top: 1px solid #777;
+      border-bottom: 0;
+      border-radius: 0;
+      background: none;
+      color: #111;
+      font-size: 13px;
+      box-shadow: none;
+    }
+    .semester-title::after {
+      content: none;
+      display: none;
+    }
+    table {
+      border: 0;
+      border-radius: 0;
+      background: #fff;
+      box-shadow: none;
+    }
+    th, td {
+      padding: 6px 7px;
+      border-right: 1px solid #777;
+      border-bottom: 1px solid #777;
+      color: #111;
+      font-size: 12px;
+    }
+    th {
+      padding: 5px 7px;
+      border-top: 1px solid #111;
+      border-bottom: 1.5px solid #111;
+      background: #fff;
+      color: #111;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    th:first-child { width: 21%; }
+    th:nth-child(2) { width: 61%; }
+    th:last-child { width: 18%; }
+    th:first-child, td:first-child { border-left: 1px solid #777; }
+    tbody tr:nth-child(even),
+    tbody tr:hover {
+      background: #fff;
+    }
+    tbody td:first-child,
+    tbody td:last-child {
+      color: #111;
+    }
+    .summary {
+      justify-content: flex-start;
+      margin-top: 12px;
+      border: 0;
+      border-top: 1.5px solid #111;
+      border-bottom: 1px solid #111;
+      border-radius: 0;
+      background: #fff;
+      box-shadow: none;
+    }
+    .metric {
+      min-width: 0;
+      flex: 1;
+      padding: 8px 10px;
+      border-right: 0;
+      color: #111;
+      text-align: left;
+    }
+    .metric span {
+      display: inline;
+      margin-right: 6px;
+      color: #111;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .metric strong,
+    .metric.status strong {
+      color: #111;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .metric.status strong::before {
+      content: "";
+      margin: 0;
+    }
+    .footer {
+      position: absolute;
+      right: 28mm;
+      bottom: 25mm;
+      left: 28mm;
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .line {
+      border-top: 1px solid #111;
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10px;
+    }
+    .line::before {
+      content: "Signature";
+      color: #555;
+      font-size: 8px;
+    }
+    .disclaimer {
+      position: absolute;
+      right: 28mm;
+      bottom: 7mm;
+      left: 28mm;
+      width: auto;
+      color: #333;
+      font-size: 8px;
+      line-height: 1.4;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .disclaimer::after {
+      content: "";
+      display: block;
+      width: 48mm;
+      height: 6mm;
+      margin: 3mm 0 0;
+      background: repeating-linear-gradient(90deg, #111 0 1px, transparent 1px 2px, #111 2px 4px, transparent 4px 6px, #111 6px 7px, transparent 7px 9px);
+    }
+
+    @media screen {
+      .page { transition: transform .2s ease, box-shadow .2s ease; }
+      .page:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 56px rgba(16, 42, 67, 0.2);
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .page {
+        width: auto;
+        min-height: 0;
+        margin: 12px;
+        padding: 28px 12px 22px;
+      }
+      .header { padding-right: 0; padding-left: 0; }
+      .header h1 { font-size: 19px; }
+      .header p:nth-of-type(2) { font-size: 15px; }
+      .semester-title { font-size: 13px; }
+      th, td { padding: 6px 4px; font-size: 12px; }
+      th { font-size: 12px; font-weight: 700; }
+      .summary { flex-wrap: wrap; }
+      .metric { flex: 1 1 33%; min-width: 90px; padding: 8px; }
+      .metric:nth-child(3) { border-right: 0; }
+      .metric:nth-child(n+4) { border-top: 1px solid var(--line); }
+      .footer {
+        position: static;
+        margin-top: 42px;
+        padding-top: 0;
+      }
+      .line { margin-top: 24px; font-size: 10px; }
+      .page::after {
+        top: 112px;
+        right: 12px;
+        width: 70px;
+        height: 88px;
+        font-size: 7px;
+      }
+      .page::before {
+        top: 28px;
+        left: 16px;
+        width: 64px;
+        height: 64px;
+        font-size: 13px;
+        line-height: 64px;
+        transform: none;
+      }
+      .header {
+        min-height: 210px;
+        padding-right: 76px;
+        padding-left: 60px;
+      }
+      .header p:nth-of-type(3),
+      .header p:nth-of-type(4) {
+        margin-left: -60px;
+      }
+    }
+
+    /* Print Logic */
+    @page { size: A4; margin: 0; }
+    @media print {
+      body {
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+      tbody tr:hover { background: inherit; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">1st Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CS-103</td><td>Programming Fundamentals</td><td>3.40</td></tr>
+        <tr><td>IT-101</td><td>Application of Information &amp; Communication Technologies (ICT)</td><td>3.10</td></tr>
+        <tr><td>EG-109</td><td>Functional English</td><td>3.60</td></tr>
+        <tr><td>COSC-1203</td><td>Object Oriented Programming (Lab)</td><td>3.30</td></tr>
+        <tr><td>IT-201</td><td>Expository Writing</td><td>3.50</td></tr>
+        <tr><td>MZ-111</td><td>Zero Math</td><td>3.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.38</strong></div>
+      <div class="metric"><span>CGPA</span><strong>&mdash;</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">2nd Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>IT-102</td><td>Database Systems</td><td>3.40</td></tr>
+        <tr><td>EG-105</td><td>Digital Logic Design</td><td>4.00</td></tr>
+        <tr><td>IT-207</td><td>Programming-related Course</td><td>3.30</td></tr>
+        <tr><td>MT-108</td><td>Mathematics</td><td>2.00</td></tr>
+        <tr><td>IT-301</td><td>Information Technology Course</td><td>3.40</td></tr>
+        <tr><td>MZ-112</td><td>Zero Math</td><td>3.30</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.24</strong></div>
+      <div class="metric"><span>CGPA</span><strong>3.31</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">3rd Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-2106</td><td>Data Structures</td><td>4.00</td></tr>
+        <tr><td>COSC-2206</td><td>Data Structures (Lab)</td><td>4.00</td></tr>
+        <tr><td>COSC-2111</td><td>Computer Organization &amp; Assembly Language</td><td>3.90</td></tr>
+        <tr><td>COSC-2211</td><td>Computer Organization &amp; Assembly Language (Lab)</td><td>4.00</td></tr>
+        <tr><td>COSC-2116</td><td>Professional Practices (Arts &amp; Humanities)</td><td>4.00</td></tr>
+        <tr><td>CYSE-2131</td><td>Cyber Security</td><td>3.70</td></tr>
+        <tr><td>CYSE-2231</td><td>Cyber Security (Lab)</td><td>4.00</td></tr>
+        <tr><td>PHYS-1103</td><td>Applied Physics (Natural Sciences)</td><td>4.00</td></tr>
+        <tr><td>PHYS-1203</td><td>Applied Physics (Natural Sciences) (Lab)</td><td>4.00</td></tr>
+        <tr><td>SOCI-2101</td><td>Civics and Community Engagement</td><td>4.00</td></tr>
+        <tr><td>POSC-1101</td><td>Ideology &amp; Constitution of Pakistan</td><td>2.80</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.83</strong></div>
+      <div class="metric"><span>CGPA</span><strong>3.50</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">4th Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-2109</td><td>Computer Networks</td><td>3.50</td></tr>
+        <tr><td>COSC-2209</td><td>Computer Networks (Lab)</td><td>3.70</td></tr>
+        <tr><td>COSC-2108</td><td>Artificial Intelligence</td><td>2.00</td></tr>
+        <tr><td>COSC-2208</td><td>Artificial Intelligence (Lab)</td><td>2.00</td></tr>
+        <tr><td>COSC-2107</td><td>Information Security</td><td>2.00</td></tr>
+        <tr><td>COSC-2207</td><td>Information Security (Lab)</td><td>2.70</td></tr>
+        <tr><td>BUAD-2101</td><td>Entrepreneurship</td><td>3.70</td></tr>
+        <tr><td>STAT-2101</td><td>Calculus &amp; Analytic Geometry</td><td>4.00</td></tr>
+        <tr><td>BUAD-1121</td><td>Principles of Management</td><td>2.50</td></tr>
+        <tr><td>ISST-1101</td><td>Islamic Studies / Ethics</td><td>4.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.40</strong></div>
+      <div class="metric"><span>CGPA</span><strong>3.10</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">5th Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>COSC-3112</td><td>Operating Systems</td><td>2.10</td></tr>
+        <tr><td>COSC-3212</td><td>Operating Systems (Lab)</td><td>3.00</td></tr>
+        <tr><td>CYSE-3133</td><td>Network Security</td><td>3.70</td></tr>
+        <tr><td>CYSE-3233</td><td>Network Security (Lab)</td><td>3.70</td></tr>
+        <tr><td>CYSE-3143</td><td>Hardware Security</td><td>2.70</td></tr>
+        <tr><td>CYSE-3243</td><td>Hardware Security (Lab)</td><td>3.00</td></tr>
+        <tr><td>CYSE-3132</td><td>Information Assurance</td><td>2.70</td></tr>
+        <tr><td>CYSE-3232</td><td>Information Assurance (Lab)</td><td>2.80</td></tr>
+        <tr><td>MATH-3182</td><td>Linear Algebra</td><td>4.00</td></tr>
+        <tr><td>CYSE-3141</td><td>Vulnerability Assessment &amp; Reverse Engineering</td><td>3.60</td></tr>
+        <tr><td>ARAB-3101</td><td>Arabic / University Elective</td><td>4.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.21</strong></div>
+      <div class="metric"><span>PCGPA</span><strong>3.40</strong></div>
+      <div class="metric"><span>CGPA</span><strong>3.36</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h1>Emerson University Multan</h1>
+      <p>Department of Computing & Emerging Technology</p>
+      <p><strong>Academic Result Card</strong></p>
+      <p><strong>Programme:</strong> BS Cyber Security (Evening)<br /><strong>Session:</strong> 2023-2027</p>
+      <p><strong>Name:</strong> Muhammad Arif<br /><strong>Roll No:</strong> ECTE231122145</p>
+    </div>
+
+    <div class="semester-title">6th Semester</div>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Course Code</th><th scope="col">Subject Name</th><th scope="col">Grade Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CYSE-3145</td><td>Wireless and Mobile Security</td><td>3.30</td></tr>
+        <tr><td>CYSE-3245</td><td>Wireless and Mobile Security (Lab)</td><td>3.20</td></tr>
+        <tr><td>CYSE-3134</td><td>Secure Software Design and Development</td><td>2.70</td></tr>
+        <tr><td>CYSE-3234</td><td>Secure Software Design and Development (Lab)</td><td>3.10</td></tr>
+        <tr><td>CYSE-3147</td><td>HCI &amp; Computer Graphics</td><td>2.70</td></tr>
+        <tr><td>CYSE-3247</td><td>HCI &amp; Computer Graphics (Lab)</td><td>3.30</td></tr>
+        <tr><td>BUAD-2123</td><td>Principles of Marketing</td><td>2.90</td></tr>
+        <tr><td>MATH-3181</td><td>Multivariable Calculus</td><td>3.30</td></tr>
+        <tr><td>ENGL-3184</td><td>Technical &amp; Business Writing</td><td>3.30</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="metric"><span>SGPA</span><strong>3.08</strong></div>
+      <div class="metric"><span>CGPA</span><strong>3.31</strong></div>
+      <div class="metric status"><span>Result Status</span><strong>Promoted</strong></div>
+    </div>
+
+    <div class="footer">
+      <div class="sign"><div class="line">Head of Department</div></div>
+      <div class="sign"><div class="line">Controller of Examinations</div></div>
+    </div>
+    <div class="disclaimer">This original academic result card is computer-generated. Any manual alteration makes it invalid.</div>
+  </div>
+
+</body>
+</html>

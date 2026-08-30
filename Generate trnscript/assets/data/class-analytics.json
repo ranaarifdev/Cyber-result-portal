@@ -1,0 +1,1986 @@
+{
+  "metadata": {
+    "totalStudents": 56,
+    "totalSemesterRecords": 326,
+    "completeStudents": 46,
+    "incompleteStudents": 10,
+    "generatedAt": "2026-08-29",
+    "sourceVersion": "2026-08-29",
+    "conflictCount": 4
+  },
+  "thresholds": {
+    "excellent": 90,
+    "good": 80,
+    "satisfactory": 65,
+    "minimumRankingRecords": 10,
+    "minimumPrivacyRecords": 5
+  },
+  "overall": {
+    "passedRecords": 275,
+    "failedRecords": 51,
+    "unknownRecords": 0,
+    "classifiedRecords": 326,
+    "overallPassPercentage": 84.36,
+    "averageSGPA": 2.78,
+    "highestPerformingSemester": 1,
+    "lowestPerformingSemester": 4
+  },
+  "semesters": [
+    {
+      "semesterNumber": 1,
+      "semesterTitle": "Semester 1",
+      "totalClassStudents": 56,
+      "validRecords": 56,
+      "missingRecords": 0,
+      "passedRecords": 51,
+      "failedRecords": 5,
+      "unknownRecords": 0,
+      "classifiedRecords": 56,
+      "passPercentage": 91.07,
+      "failPercentage": 8.93,
+      "validSGPARecords": 56,
+      "averageSGPA": 3.33,
+      "highestSGPA": 4.0,
+      "lowestSGPA": 0.0,
+      "averageCGPA": null,
+      "changeFromPreviousSGPA": null,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "semesterTitle": "Semester 2",
+      "totalClassStudents": 56,
+      "validRecords": 56,
+      "missingRecords": 0,
+      "passedRecords": 48,
+      "failedRecords": 8,
+      "unknownRecords": 0,
+      "classifiedRecords": 56,
+      "passPercentage": 85.71,
+      "failPercentage": 14.29,
+      "validSGPARecords": 56,
+      "averageSGPA": 2.59,
+      "highestSGPA": 3.8,
+      "lowestSGPA": 0.0,
+      "averageCGPA": 2.95,
+      "changeFromPreviousSGPA": -0.74,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 3,
+      "semesterTitle": "Semester 3",
+      "totalClassStudents": 56,
+      "validRecords": 56,
+      "missingRecords": 0,
+      "passedRecords": 47,
+      "failedRecords": 9,
+      "unknownRecords": 0,
+      "classifiedRecords": 56,
+      "passPercentage": 83.93,
+      "failPercentage": 16.07,
+      "validSGPARecords": 56,
+      "averageSGPA": 2.96,
+      "highestSGPA": 3.99,
+      "lowestSGPA": 0.0,
+      "averageCGPA": 2.95,
+      "changeFromPreviousSGPA": 0.37,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "semesterTitle": "Semester 4",
+      "totalClassStudents": 56,
+      "validRecords": 56,
+      "missingRecords": 0,
+      "passedRecords": 44,
+      "failedRecords": 12,
+      "unknownRecords": 0,
+      "classifiedRecords": 56,
+      "passPercentage": 78.57,
+      "failPercentage": 21.43,
+      "validSGPARecords": 56,
+      "averageSGPA": 2.43,
+      "highestSGPA": 3.67,
+      "lowestSGPA": 0.0,
+      "averageCGPA": 2.82,
+      "changeFromPreviousSGPA": -0.53,
+      "performance": "Satisfactory"
+    },
+    {
+      "semesterNumber": 5,
+      "semesterTitle": "Semester 5",
+      "totalClassStudents": 56,
+      "validRecords": 46,
+      "missingRecords": 10,
+      "passedRecords": 41,
+      "failedRecords": 5,
+      "unknownRecords": 0,
+      "classifiedRecords": 46,
+      "passPercentage": 89.13,
+      "failPercentage": 10.87,
+      "validSGPARecords": 46,
+      "averageSGPA": 2.85,
+      "highestSGPA": 3.9,
+      "lowestSGPA": 0.0,
+      "averageCGPA": 3.19,
+      "changeFromPreviousSGPA": 0.42,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 6,
+      "semesterTitle": "Semester 6",
+      "totalClassStudents": 56,
+      "validRecords": 56,
+      "missingRecords": 0,
+      "passedRecords": 44,
+      "failedRecords": 12,
+      "unknownRecords": 0,
+      "classifiedRecords": 56,
+      "passPercentage": 78.57,
+      "failPercentage": 21.43,
+      "validSGPARecords": 56,
+      "averageSGPA": 2.52,
+      "highestSGPA": 3.96,
+      "lowestSGPA": 0.0,
+      "averageCGPA": 2.69,
+      "changeFromPreviousSGPA": -0.33,
+      "performance": "Satisfactory"
+    }
+  ],
+  "activeStudents": 46,
+  "droppedStudents": 10,
+  "studentStatistics": {
+    "totalStudents": 56,
+    "officialPromoted": 44,
+    "officialDropped": 12,
+    "otherOfficialStatus": 0,
+    "completeRecords": 46,
+    "incompleteRecords": 10,
+    "note": "Official status counts and record-completeness counts are separate dimensions and may overlap."
+  },
+  "merit": {
+    "semesterToppers": [
+      {
+        "semesterNumber": 1,
+        "highestSGPA": 4.0,
+        "students": [
+          {
+            "name": "Hira Zafar",
+            "rollNumber": "ECTE231122107",
+            "sgpa": 4.0
+          },
+          {
+            "name": "Laiba",
+            "rollNumber": "ECTE231122117",
+            "sgpa": 4.0
+          },
+          {
+            "name": "Sharjeel Saqib",
+            "rollNumber": "ECTE231122131",
+            "sgpa": 4.0
+          },
+          {
+            "name": "Muneeb Ur Rehman",
+            "rollNumber": "ECTE231122134",
+            "sgpa": 4.0
+          }
+        ]
+      },
+      {
+        "semesterNumber": 2,
+        "highestSGPA": 3.8,
+        "students": [
+          {
+            "name": "Sharjeel Saqib",
+            "rollNumber": "ECTE231122131",
+            "sgpa": 3.8
+          }
+        ]
+      },
+      {
+        "semesterNumber": 3,
+        "highestSGPA": 3.99,
+        "students": [
+          {
+            "name": "Muhammad Basit",
+            "rollNumber": "ECTE231122112",
+            "sgpa": 3.99
+          }
+        ]
+      },
+      {
+        "semesterNumber": 4,
+        "highestSGPA": 3.67,
+        "students": [
+          {
+            "name": "Romaisa Khan",
+            "rollNumber": "ECTE231122103",
+            "sgpa": 3.67
+          },
+          {
+            "name": "Hira Zafar",
+            "rollNumber": "ECTE231122107",
+            "sgpa": 3.67
+          }
+        ]
+      },
+      {
+        "semesterNumber": 5,
+        "highestSGPA": 3.9,
+        "students": [
+          {
+            "name": "Misbah Bibi",
+            "rollNumber": "ECTE231122102",
+            "sgpa": 3.9
+          }
+        ]
+      },
+      {
+        "semesterNumber": 6,
+        "highestSGPA": 3.96,
+        "students": [
+          {
+            "name": "Sharjeel Saqib",
+            "rollNumber": "ECTE231122131",
+            "sgpa": 3.96
+          }
+        ]
+      }
+    ],
+    "cgpaRanking": [
+      {
+        "rank": 1,
+        "name": "Sharjeel Saqib",
+        "rollNumber": "ECTE231122131",
+        "cgpa": 3.82
+      },
+      {
+        "rank": 2,
+        "name": "Muhammad Basit",
+        "rollNumber": "ECTE231122112",
+        "cgpa": 3.75
+      },
+      {
+        "rank": 3,
+        "name": "Misbah Bibi",
+        "rollNumber": "ECTE231122102",
+        "cgpa": 3.73
+      },
+      {
+        "rank": 3,
+        "name": "Hira Zafar",
+        "rollNumber": "ECTE231122107",
+        "cgpa": 3.73
+      },
+      {
+        "rank": 5,
+        "name": "Romaisa Khan",
+        "rollNumber": "ECTE231122103",
+        "cgpa": 3.69
+      },
+      {
+        "rank": 6,
+        "name": "Khansa Aamir",
+        "rollNumber": "ECTE231122110",
+        "cgpa": 3.61
+      },
+      {
+        "rank": 7,
+        "name": "Muhammad Shahzaib",
+        "rollNumber": "ECTE231122101",
+        "cgpa": 3.53
+      },
+      {
+        "rank": 7,
+        "name": "Shayan Ahmad",
+        "rollNumber": "ECTE231122154",
+        "cgpa": 3.53
+      },
+      {
+        "rank": 9,
+        "name": "Muhammad Abdullah",
+        "rollNumber": "ECTE231122152",
+        "cgpa": 3.52
+      },
+      {
+        "rank": 10,
+        "name": "Javed Iqbal",
+        "rollNumber": "ECTE231122104",
+        "cgpa": 3.45
+      }
+    ],
+    "methodology": "Semester toppers use the highest verified official SGPA in each semester and retain ties. CGPA ranking uses only students with all six semester records, sorts verified overall CGPA descending, retains ties, and displays ranks through position 10."
+  },
+  "subjectAnalytics": [
+    {
+      "semesterNumber": 1,
+      "courseCode": "COSC-1203",
+      "courseTitle": "Object Oriented Programming (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.6,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.3,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "CS-103",
+      "courseTitle": "Programming Fundamentals",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.81,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.9,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "EG-109",
+      "courseTitle": "Functional English",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.32,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.2,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "IT-101",
+      "courseTitle": "Application of Information & Communication Technologies (ICT)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.96,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 3.1,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "IT-201",
+      "courseTitle": "Expository Writing",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 3.38,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "EG-105",
+      "courseTitle": "Digital Logic Design",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.32,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.1,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-102",
+      "courseTitle": "Database Systems",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 3.3,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-207",
+      "courseTitle": "Programming-related Course",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 44,
+      "supplyRecords": 2,
+      "unknownRecords": 0,
+      "passPercentage": 95.65,
+      "supplyPercentage": 4.35,
+      "averageGradePoint": 2.58,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-301",
+      "courseTitle": "Information Technology Course",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.53,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.8,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "MT-108",
+      "courseTitle": "Mathematics",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 2.2,
+      "highestGradePoint": 3.2,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2106",
+      "courseTitle": "Data Structures",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 3.58,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2111",
+      "courseTitle": "Computer Organization & Assembly Language",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.46,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.4,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2116",
+      "courseTitle": "Professional Practices (Arts & Humanities)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.76,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.7,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2206",
+      "courseTitle": "Data Structures (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.76,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 3.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2211",
+      "courseTitle": "Computer Organization & Assembly Language (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.73,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "CYSE-2131",
+      "courseTitle": "Cyber Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.79,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.9,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "CYSE-2231",
+      "courseTitle": "Cyber Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 44,
+      "supplyRecords": 2,
+      "unknownRecords": 0,
+      "passPercentage": 95.65,
+      "supplyPercentage": 4.35,
+      "averageGradePoint": 3.65,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "PHYS-1103",
+      "courseTitle": "Applied Physics (Natural Sciences)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 2.89,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "PHYS-1203",
+      "courseTitle": "Applied Physics (Natural Sciences) (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.48,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "POSC-1101",
+      "courseTitle": "Ideology & Constitution of Pakistan",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.43,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.1,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "SOCI-2101",
+      "courseTitle": "Civics and Community Engagement",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.53,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.5,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "BUAD-1121",
+      "courseTitle": "Principles of Management",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 2.63,
+      "highestGradePoint": 3.4,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "BUAD-2101",
+      "courseTitle": "Entrepreneurship",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.69,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.5,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2107",
+      "courseTitle": "Information Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.07,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2108",
+      "courseTitle": "Artificial Intelligence",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 38,
+      "supplyRecords": 8,
+      "unknownRecords": 0,
+      "passPercentage": 82.61,
+      "supplyPercentage": 17.39,
+      "averageGradePoint": 2.25,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2109",
+      "courseTitle": "Computer Networks",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 44,
+      "supplyRecords": 2,
+      "unknownRecords": 0,
+      "passPercentage": 95.65,
+      "supplyPercentage": 4.35,
+      "averageGradePoint": 2.68,
+      "highestGradePoint": 3.7,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2207",
+      "courseTitle": "Information Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.05,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2208",
+      "courseTitle": "Artificial Intelligence (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 38,
+      "supplyRecords": 8,
+      "unknownRecords": 0,
+      "passPercentage": 82.61,
+      "supplyPercentage": 17.39,
+      "averageGradePoint": 2.7,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2209",
+      "courseTitle": "Computer Networks (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 3.15,
+      "highestGradePoint": 3.9,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "ISST-1101",
+      "courseTitle": "Islamic Studies / Ethics",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 45,
+      "supplyRecords": 1,
+      "unknownRecords": 0,
+      "passPercentage": 97.83,
+      "supplyPercentage": 2.17,
+      "averageGradePoint": 3.85,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "STAT-2101",
+      "courseTitle": "Calculus & Analytic Geometry",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.44,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.2,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "ARAB-3101",
+      "courseTitle": "Arabic / University Elective",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 3.7,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "COSC-3112",
+      "courseTitle": "Operating Systems",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 2.56,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "COSC-3212",
+      "courseTitle": "Operating Systems (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 3.05,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3132",
+      "courseTitle": "Information Assurance",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 41,
+      "supplyRecords": 5,
+      "unknownRecords": 0,
+      "passPercentage": 89.13,
+      "supplyPercentage": 10.87,
+      "averageGradePoint": 2.86,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3133",
+      "courseTitle": "Network Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 2.75,
+      "highestGradePoint": 3.7,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3141",
+      "courseTitle": "Vulnerability Assessment & Reverse Engineering",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.6,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3143",
+      "courseTitle": "Hardware Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 2.63,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3232",
+      "courseTitle": "Information Assurance (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 3.28,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3233",
+      "courseTitle": "Network Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 41,
+      "supplyRecords": 5,
+      "unknownRecords": 0,
+      "passPercentage": 89.13,
+      "supplyPercentage": 10.87,
+      "averageGradePoint": 2.44,
+      "highestGradePoint": 3.8,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3243",
+      "courseTitle": "Hardware Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 2.68,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "MATH-3182",
+      "courseTitle": "Linear Algebra",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 3.47,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "BUAD-2123",
+      "courseTitle": "Principles of Marketing",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 3.05,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3134",
+      "courseTitle": "Secure Software Design and Development",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 3.04,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3145",
+      "courseTitle": "Wireless and Mobile Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 2.91,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3147",
+      "courseTitle": "HCI & Computer Graphics",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 41,
+      "supplyRecords": 5,
+      "unknownRecords": 0,
+      "passPercentage": 89.13,
+      "supplyPercentage": 10.87,
+      "averageGradePoint": 3.22,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3234",
+      "courseTitle": "Secure Software Design and Development (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 3.14,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3245",
+      "courseTitle": "Wireless and Mobile Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 2.79,
+      "highestGradePoint": 3.8,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3247",
+      "courseTitle": "HCI & Computer Graphics (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 42,
+      "supplyRecords": 4,
+      "unknownRecords": 0,
+      "passPercentage": 91.3,
+      "supplyPercentage": 8.7,
+      "averageGradePoint": 3.55,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "ENGL-3184",
+      "courseTitle": "Technical & Business Writing",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 3.34,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "MATH-3181",
+      "courseTitle": "Multivariable Calculus",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 43,
+      "supplyRecords": 3,
+      "unknownRecords": 0,
+      "passPercentage": 93.48,
+      "supplyPercentage": 6.52,
+      "averageGradePoint": 2.77,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Excellent"
+    }
+  ],
+  "strongPerformingSubjects": [
+    {
+      "semesterNumber": 1,
+      "courseCode": "IT-101",
+      "courseTitle": "Application of Information & Communication Technologies (ICT)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.96,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 3.1,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "CS-103",
+      "courseTitle": "Programming Fundamentals",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.81,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.9,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "CYSE-2131",
+      "courseTitle": "Cyber Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.79,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.9,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2116",
+      "courseTitle": "Professional Practices (Arts & Humanities)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.76,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 2.7,
+      "performance": "Excellent"
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2206",
+      "courseTitle": "Data Structures (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 46,
+      "supplyRecords": 0,
+      "unknownRecords": 0,
+      "passPercentage": 100.0,
+      "supplyPercentage": 0.0,
+      "averageGradePoint": 3.76,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 3.0,
+      "performance": "Excellent"
+    }
+  ],
+  "subjectsNeedingImprovement": [
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2108",
+      "courseTitle": "Artificial Intelligence",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 38,
+      "supplyRecords": 8,
+      "unknownRecords": 0,
+      "passPercentage": 82.61,
+      "supplyPercentage": 17.39,
+      "averageGradePoint": 2.25,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2208",
+      "courseTitle": "Artificial Intelligence (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 38,
+      "supplyRecords": 8,
+      "unknownRecords": 0,
+      "passPercentage": 82.61,
+      "supplyPercentage": 17.39,
+      "averageGradePoint": 2.7,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2107",
+      "courseTitle": "Information Security",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.07,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2207",
+      "courseTitle": "Information Security (Lab)",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.05,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3141",
+      "courseTitle": "Vulnerability Assessment & Reverse Engineering",
+      "activeStudentsExpected": 46,
+      "validRecords": 46,
+      "passedRecords": 40,
+      "supplyRecords": 6,
+      "unknownRecords": 0,
+      "passPercentage": 86.96,
+      "supplyPercentage": 13.04,
+      "averageGradePoint": 2.6,
+      "highestGradePoint": 4.0,
+      "lowestGradePoint": 0.0,
+      "performance": "Good"
+    }
+  ],
+  "subjectsWithHighestSupplyCounts": [
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2108",
+      "courseTitle": "Artificial Intelligence",
+      "supplyRecords": 7
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2208",
+      "courseTitle": "Artificial Intelligence (Lab)",
+      "supplyRecords": 7
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2107",
+      "courseTitle": "Information Security",
+      "supplyRecords": 5
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2207",
+      "courseTitle": "Information Security (Lab)",
+      "supplyRecords": 5
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "MT-108",
+      "courseTitle": "Mathematics",
+      "supplyRecords": 3
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3141",
+      "courseTitle": "Vulnerability Assessment & Reverse Engineering",
+      "supplyRecords": 3
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-207",
+      "courseTitle": "Programming-related Course",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "CYSE-2231",
+      "courseTitle": "Cyber Security (Lab)",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3132",
+      "courseTitle": "Information Assurance",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3233",
+      "courseTitle": "Network Security (Lab)",
+      "supplyRecords": 2
+    }
+  ],
+  "supplyHistorySubjects": [
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2108",
+      "courseTitle": "Artificial Intelligence",
+      "supplyRecords": 7
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2208",
+      "courseTitle": "Artificial Intelligence (Lab)",
+      "supplyRecords": 7
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2107",
+      "courseTitle": "Information Security",
+      "supplyRecords": 5
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2207",
+      "courseTitle": "Information Security (Lab)",
+      "supplyRecords": 5
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "MT-108",
+      "courseTitle": "Mathematics",
+      "supplyRecords": 3
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3141",
+      "courseTitle": "Vulnerability Assessment & Reverse Engineering",
+      "supplyRecords": 3
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-207",
+      "courseTitle": "Programming-related Course",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "CYSE-2231",
+      "courseTitle": "Cyber Security (Lab)",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3132",
+      "courseTitle": "Information Assurance",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3233",
+      "courseTitle": "Network Security (Lab)",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3147",
+      "courseTitle": "HCI & Computer Graphics",
+      "supplyRecords": 2
+    },
+    {
+      "semesterNumber": 1,
+      "courseCode": "IT-201",
+      "courseTitle": "Expository Writing",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 2,
+      "courseCode": "IT-102",
+      "courseTitle": "Database Systems",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "COSC-2106",
+      "courseTitle": "Data Structures",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 3,
+      "courseCode": "PHYS-1103",
+      "courseTitle": "Applied Physics (Natural Sciences)",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "BUAD-1121",
+      "courseTitle": "Principles of Management",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "COSC-2109",
+      "courseTitle": "Computer Networks",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 4,
+      "courseCode": "ISST-1101",
+      "courseTitle": "Islamic Studies / Ethics",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 5,
+      "courseCode": "CYSE-3133",
+      "courseTitle": "Network Security",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "BUAD-2123",
+      "courseTitle": "Principles of Marketing",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3134",
+      "courseTitle": "Secure Software Design and Development",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3145",
+      "courseTitle": "Wireless and Mobile Security",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3234",
+      "courseTitle": "Secure Software Design and Development (Lab)",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3245",
+      "courseTitle": "Wireless and Mobile Security (Lab)",
+      "supplyRecords": 1
+    },
+    {
+      "semesterNumber": 6,
+      "courseCode": "CYSE-3247",
+      "courseTitle": "HCI & Computer Graphics (Lab)",
+      "supplyRecords": 1
+    }
+  ],
+  "semesterSupplySummary": [
+    {
+      "semesterNumber": 1,
+      "analysedStudents": 43,
+      "studentsWithSupply": 1,
+      "studentsWithoutSupply": 42,
+      "totalSupplySubjects": 1,
+      "unknownRecords": 0,
+      "affectedPercentage": 2.33
+    },
+    {
+      "semesterNumber": 2,
+      "analysedStudents": 43,
+      "studentsWithSupply": 6,
+      "studentsWithoutSupply": 37,
+      "totalSupplySubjects": 6,
+      "unknownRecords": 0,
+      "affectedPercentage": 13.95
+    },
+    {
+      "semesterNumber": 3,
+      "analysedStudents": 43,
+      "studentsWithSupply": 4,
+      "studentsWithoutSupply": 39,
+      "totalSupplySubjects": 4,
+      "unknownRecords": 0,
+      "affectedPercentage": 9.3
+    },
+    {
+      "semesterNumber": 4,
+      "analysedStudents": 43,
+      "studentsWithSupply": 10,
+      "studentsWithoutSupply": 33,
+      "totalSupplySubjects": 27,
+      "unknownRecords": 0,
+      "affectedPercentage": 23.26
+    },
+    {
+      "semesterNumber": 5,
+      "analysedStudents": 43,
+      "studentsWithSupply": 5,
+      "studentsWithoutSupply": 38,
+      "totalSupplySubjects": 8,
+      "unknownRecords": 0,
+      "affectedPercentage": 11.63
+    },
+    {
+      "semesterNumber": 6,
+      "analysedStudents": 43,
+      "studentsWithSupply": 2,
+      "studentsWithoutSupply": 41,
+      "totalSupplySubjects": 8,
+      "unknownRecords": 0,
+      "affectedPercentage": 4.65
+    }
+  ],
+  "supplySummary": {
+    "totalStudentsAnalysed": 43,
+    "studentsWithSupply": 18,
+    "totalSupplySubjectRecords": 54,
+    "semesterWithMostSupplies": 4
+  },
+  "mzParticipants": {
+    "summary": {
+      "totalParticipants": 19,
+      "totalEnrollments": 38,
+      "passedCount": 37,
+      "failedSupplyCount": 1,
+      "unknownCount": 0
+    },
+    "participantRule": "Pre-Medical participation is evidenced by at least one positive MZ grade point; placeholder-only zero MZ rows are excluded.",
+    "statusRule": "Verified MZ grade point 2.0-4.0 = Pass; 0.0 = Fail; missing or invalid = Unknown.",
+    "records": [
+      {
+        "studentName": "Misbah Bibi",
+        "rollNumber": "ECTE231122102",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.7,
+        "resultStatus": "Pass",
+        "cgpa": 3.73
+      },
+      {
+        "studentName": "Misbah Bibi",
+        "rollNumber": "ECTE231122102",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.73
+      },
+      {
+        "studentName": "Javed Iqbal",
+        "rollNumber": "ECTE231122104",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.45
+      },
+      {
+        "studentName": "Javed Iqbal",
+        "rollNumber": "ECTE231122104",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.45
+      },
+      {
+        "studentName": "Muhammad Sanawar Ali",
+        "rollNumber": "ECTE231122106",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.1,
+        "resultStatus": "Pass",
+        "cgpa": 3.06
+      },
+      {
+        "studentName": "Muhammad Sanawar Ali",
+        "rollNumber": "ECTE231122106",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.06
+      },
+      {
+        "studentName": "Hamna Iqbal",
+        "rollNumber": "ECTE231122109",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 2.16
+      },
+      {
+        "studentName": "Hamna Iqbal",
+        "rollNumber": "ECTE231122109",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 2.16
+      },
+      {
+        "studentName": "Khansa Aamir",
+        "rollNumber": "ECTE231122110",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.61
+      },
+      {
+        "studentName": "Khansa Aamir",
+        "rollNumber": "ECTE231122110",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.61
+      },
+      {
+        "studentName": "Khuzaima Khalil",
+        "rollNumber": "ECTE231122116",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.1,
+        "resultStatus": "Pass",
+        "cgpa": 3.43
+      },
+      {
+        "studentName": "Khuzaima Khalil",
+        "rollNumber": "ECTE231122116",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.43
+      },
+      {
+        "studentName": "Allah Nawaz",
+        "rollNumber": "ECTE231122118",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.16
+      },
+      {
+        "studentName": "Allah Nawaz",
+        "rollNumber": "ECTE231122118",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.16
+      },
+      {
+        "studentName": "Ghulam Hussain",
+        "rollNumber": "ECTE231122120",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 2.6
+      },
+      {
+        "studentName": "Ghulam Hussain",
+        "rollNumber": "ECTE231122120",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 2.6
+      },
+      {
+        "studentName": "Rashid Ali",
+        "rollNumber": "ECTE231122125",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 2.95
+      },
+      {
+        "studentName": "Rashid Ali",
+        "rollNumber": "ECTE231122125",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.5,
+        "resultStatus": "Pass",
+        "cgpa": 2.95
+      },
+      {
+        "studentName": "Muhammad Adnan Ali",
+        "rollNumber": "ECTE231122126",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.04
+      },
+      {
+        "studentName": "Muhammad Adnan Ali",
+        "rollNumber": "ECTE231122126",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.1,
+        "resultStatus": "Pass",
+        "cgpa": 3.04
+      },
+      {
+        "studentName": "Ayesha Nadeem",
+        "rollNumber": "ECTE231122132",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.7,
+        "resultStatus": "Pass",
+        "cgpa": 0.6
+      },
+      {
+        "studentName": "Ayesha Nadeem",
+        "rollNumber": "ECTE231122132",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 0.0,
+        "resultStatus": "Fail",
+        "cgpa": 0.6
+      },
+      {
+        "studentName": "Muhammad Hannan Haider",
+        "rollNumber": "ECTE231122133",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.33
+      },
+      {
+        "studentName": "Muhammad Hannan Haider",
+        "rollNumber": "ECTE231122133",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.8,
+        "resultStatus": "Pass",
+        "cgpa": 3.33
+      },
+      {
+        "studentName": "Muneeb Ur Rehman",
+        "rollNumber": "ECTE231122134",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.17
+      },
+      {
+        "studentName": "Muneeb Ur Rehman",
+        "rollNumber": "ECTE231122134",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 4.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.17
+      },
+      {
+        "studentName": "Hafiz Hamid Ali",
+        "rollNumber": "ECTE231122135",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.7,
+        "resultStatus": "Pass",
+        "cgpa": 2.94
+      },
+      {
+        "studentName": "Hafiz Hamid Ali",
+        "rollNumber": "ECTE231122135",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 2.94
+      },
+      {
+        "studentName": "Badar Ahmad",
+        "rollNumber": "ECTE231122140",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.7,
+        "resultStatus": "Pass",
+        "cgpa": 2.71
+      },
+      {
+        "studentName": "Badar Ahmad",
+        "rollNumber": "ECTE231122140",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.0,
+        "resultStatus": "Pass",
+        "cgpa": 2.71
+      },
+      {
+        "studentName": "Muhammad Arif",
+        "rollNumber": "ECTE231122145",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.31
+      },
+      {
+        "studentName": "Muhammad Arif",
+        "rollNumber": "ECTE231122145",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.31
+      },
+      {
+        "studentName": "Faizan Ali Chohan",
+        "rollNumber": "ECTE231122150",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.7,
+        "resultStatus": "Pass",
+        "cgpa": 3.33
+      },
+      {
+        "studentName": "Faizan Ali Chohan",
+        "rollNumber": "ECTE231122150",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.33
+      },
+      {
+        "studentName": "Rabia Bibi",
+        "rollNumber": "ECTE231122151",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.7,
+        "resultStatus": "Pass",
+        "cgpa": 1.84
+      },
+      {
+        "studentName": "Rabia Bibi",
+        "rollNumber": "ECTE231122151",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.0,
+        "resultStatus": "Pass",
+        "cgpa": 1.84
+      },
+      {
+        "studentName": "Mahrukh Chodry",
+        "rollNumber": "ECTE231122153",
+        "semesterNumber": 1,
+        "courseCode": "MZ-111",
+        "courseTitle": "Zero Math",
+        "gradePoint": 3.0,
+        "resultStatus": "Pass",
+        "cgpa": 3.18
+      },
+      {
+        "studentName": "Mahrukh Chodry",
+        "rollNumber": "ECTE231122153",
+        "semesterNumber": 2,
+        "courseCode": "MZ-112",
+        "courseTitle": "Zero Math",
+        "gradePoint": 2.3,
+        "resultStatus": "Pass",
+        "cgpa": 3.18
+      }
+    ]
+  },
+  "subjectAnalyticsAvailable": true,
+  "limitations": [
+    "Subject status is derived from the verified final grade-point field: 2.0–4.0 passed and 0.0 supply/non-passed.",
+    "MZ Zero Mathematics courses are excluded because sample calculations confirm they do not contribute to SGPA.",
+    "Course marks, credit hours, letter grades, and quality points remain unavailable.",
+    "4 workbook/PDF numeric conflicts are documented; workbook values are used consistently."
+  ],
+  "subjectPassRule": {
+    "minimumPassingGradePoint": 2.0,
+    "zeroMeansFailure": true,
+    "excludeCoursePrefixes": [
+      "MZ"
+    ]
+  },
+  "excludedMZRecords": 36,
+  "classificationRules": {
+    "passed": "Official semester status Promoted, Pass, or Passed.",
+    "failed": "Official semester status containing Fail, Supply, Supplementary, Dropped, or Probation.",
+    "unknown": "Missing or unrecognized official semester status; GPA is not used to infer status.",
+    "missing": "No semester record for the student; missing records are not classified as failures."
+  }
+}
