@@ -53,10 +53,11 @@
   async function init() {
     bindFeedback();
     try {
-      const analyticsResponse = await fetch("assets/data/class-analytics.json", { cache: "no-store" });
+      const analyticsUrl = new URL("assets/data/class-analytics.json", document.baseURI);
+      const analyticsResponse = await fetch(analyticsUrl, { cache: "no-store" });
       if (!analyticsResponse.ok) throw new Error("Portal section data request failed");
       const analytics = await analyticsResponse.json();
-      if (!analytics.merit) throw new Error("Portal section data is invalid");
+      if (!analytics.merit || !Array.isArray(analytics.merit.semesterToppers) || !Array.isArray(analytics.merit.cgpaRanking)) throw new Error("Portal section data is invalid");
       renderMerit(analytics);
     } catch (error) {
       console.error("Unable to load portal sections", error);

@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_VERSION = "student-result-portal-v19-runtime-only";
+const CACHE_VERSION = "student-result-portal-v20-interface-refresh";
 const APP_ASSETS = [
   "./",
   "./index.html",
