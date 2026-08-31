@@ -40,3 +40,111 @@ body{position:relative;isolation:isolate;min-height:100dvh;background:#0a1722;ba
 @media(prefers-color-scheme:dark){.portal-dashboard{background:rgba(11,29,43,.95);border-color:rgba(111,143,164,.28)}.section-intro h2,.content-card h3,.download-grid h3,.grading-grid h3,.help-grid h3,.notice-card h3,.feedback-form h3,.content-details summary,.grading-grid summary{color:#f2f6f9}.section-intro p,.quick-access span{color:#b8c8d4}.quick-access a,.content-card,.download-grid article,.help-grid article,.grading-grid>div,.notice-card,.feedback-form{background:#10283a;border-color:#365064;color:#e7edf2}.latest-announcement{background:#3d3219;color:#fff1c4}.notice-type{background:#1e4057;color:#e5f3fc}.feedback-form input,.feedback-form textarea{background:#0b1d2b;color:#fff;border-color:#6f8597}}
 /* Keep the portal light and neutral instead of applying a dark visual treatment. */
 body{background:#f7f9fb;background-attachment:scroll}body::before,body::after{display:none}.site-header{background:var(--navy);backdrop-filter:none;-webkit-backdrop-filter:none}.hero{background:#fff;box-shadow:0 12px 30px rgba(16,42,67,.1)}.hero::before,.hero::after{display:none}.hero h1{color:var(--navy)}.hero .lead{color:var(--muted)}.hero .kicker{color:var(--maroon)}.portal-dashboard,.class-analytics,.page-card,.result-shell{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}.download-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(prefers-color-scheme:dark){body{background:#f7f9fb;color:var(--ink)}.portal-dashboard,.class-analytics,.page-card,.result-shell{background:#fff;color:var(--ink);border-color:var(--line)}.section-intro h2,.content-card h3,.download-grid h3,.grading-grid h3,.help-grid h3,.feedback-form h3,.content-details summary,.grading-grid summary{color:var(--navy)}.section-intro p,.quick-access span{color:var(--muted)}.quick-access a,.content-card,.download-grid article,.help-grid article,.grading-grid>div,.feedback-form{background:var(--soft);border-color:var(--line);color:var(--ink)}.feedback-form input,.feedback-form textarea{background:#fff;color:var(--ink);border-color:#9bacb9}}
+
+/* Stable light portal theme and compact desktop layout. */
+html{color-scheme:light}body{background:#f4f7fa!important;color:#17212b!important}body::before,body::after{display:none!important}.site-header{background:#102a43!important;border-bottom:3px solid #c79a35}.brand{padding:14px 0}.brand .eyebrow{font-size:1.05rem}.board-nav{background:#fff!important;box-shadow:0 2px 10px rgba(16,42,67,.1)}.board-nav a{color:#102a43!important;padding:9px 10px;font-size:.82rem}.board-nav a[aria-current=\"location\"]{background:#fff8e7!important;color:#7b1e3a!important}.hero{width:min(1160px,calc(100% - 40px));grid-template-columns:1.1fr .9fr;gap:42px;margin-top:24px;padding:52px 48px;background:#fff!important;border:1px solid #d8e0e7;border-radius:18px;box-shadow:0 14px 34px rgba(16,42,67,.12)}.hero h1{font-size:clamp(3rem,5vw,4.65rem);line-height:1.02;color:#102a43!important}.hero .lead{color:#526576!important;max-width:600px}.hero .kicker{color:#8b1f3d!important}.search-card{padding:28px;background:#fff!important;border:1px solid #d8e0e7;border-top:4px solid #c79a35;box-shadow:0 10px 28px rgba(16,42,67,.1)}.search-row input{background:#fff!important;color:#17212b!important}.search-row button{min-height:48px}.portal-dashboard,.class-analytics,.page-card,.result-shell,.board-section{background:#fff!important;color:#17212b!important;border-color:#d8e0e7!important;box-shadow:0 10px 26px rgba(16,42,67,.08)!important}.portal-dashboard{margin-block:28px;padding:30px}.class-analytics{margin-top:28px}.board-section{margin-bottom:22px;padding:28px}.section-intro h2,.board-section h2,.content-card h3,.download-grid h3,.grading-grid h3,.help-grid h3,.feedback-form h3,.content-details summary,.grading-grid summary{color:#102a43!important}.section-intro p,.quick-access span,.board-section p{color:#526576}.quick-access a,.content-card,.download-grid article,.help-grid article,.grading-grid>div,.feedback-form{background:#f7f9fb!important;color:#17212b!important;border-color:#d8e0e7!important}.quick-access a{min-height:96px;padding:17px}.analytics-stat,.semester-analytics-card,.analytics-panel,.subject-rankings section{background:#fff!important;color:#17212b!important;border-color:#d8e0e7!important}.analytics-stat strong,.semester-analytics-card h4,.analytics-panel summary,.subject-rankings h3{color:#102a43!important}.merit-grid{gap:14px}.content-card{padding:18px}.table-scroll{background:#fff}.content-details{padding:12px 14px;background:#f7f9fb;border:1px solid #d8e0e7;border-radius:8px}@media (max-width:900px){.hero{grid-template-columns:1fr;width:min(100% - 28px,1160px);padding:42px 34px;gap:28px}.board-nav a{font-size:.78rem}.portal-dashboard,.class-analytics{padding:24px}.board-section{padding:24px}}@media (max-width:560px){.hero{width:calc(100% - 20px);padding:32px 20px}.hero h1{font-size:clamp(2.35rem,13vw,3.4rem)}.search-card{padding:20px 16px}.portal-dashboard,.class-analytics{width:calc(100% - 16px);padding:20px 14px}.board-section{padding:20px 16px}.brand{padding:12px 0}}
+
+/* ── Contrast & Readability Fix ────────────────────────────────────────────────
+   Ensures the "Semester SGPA progress" chart and "Academic progress" table are
+   clearly readable across all OS colour-scheme preferences (WCAG AA target).
+   Scope: .chart-card and .table-section only – no other layout changes.
+─────────────────────────────────────────────────────────────────────────────── */
+
+/* Force chart-card and table-section to always render with a white background
+   and dark text so that chart labels and table content are never obscured by a
+   dark-mode override applied to the surrounding result-shell. */
+.chart-card,
+.table-section {
+  background: #ffffff !important;
+  color: #17212b !important;
+  border-color: #d8e0e7 !important;
+}
+
+/* Section headings inside the cards */
+.chart-card h3,
+.table-section h3 {
+  color: #102a43 !important;
+}
+
+/* SGPA value labels displayed above each bar (e.g. "3.50") */
+.chart-item span {
+  color: #102a43 !important;
+  font-weight: 700;
+}
+
+/* Semester axis labels below each bar (e.g. "S1", "S2" …) */
+.chart-item small {
+  color: #526576 !important;
+  font-weight: 700;
+}
+
+/* Divider line at bottom of the progress chart */
+.progress-chart {
+  border-bottom-color: #d8e0e7 !important;
+}
+
+/* Table header cells – always light background, dark navy text */
+.chart-card th,
+.table-section th {
+  background: #eef2f5 !important;
+  color: #102a43 !important;
+  border-color: #c4cdd4 !important;
+}
+
+/* Table data cells – always white background, dark ink text */
+.chart-card td,
+.table-section td {
+  background: #ffffff !important;
+  color: #17212b !important;
+  border-color: #c4cdd4 !important;
+}
+
+/* Alternating row tint – sufficient contrast ratio against #17212b text */
+.chart-card tbody tr:nth-child(even) td,
+.table-section tbody tr:nth-child(even) td {
+  background: #f4f7fa !important;
+}
+
+/* Hover row highlight */
+.chart-card tbody tr:hover td,
+.table-section tbody tr:hover td {
+  background: #e8f0f7 !important;
+  color: #17212b !important;
+}
+
+/* Bar fill colours – kept on-brand (navy for generic bars, gold for SGPA) */
+.chart-item .bar {
+  background: var(--navy);
+}
+
+/* Ensure analytics chart bars inside the class-analytics section retain their
+   existing colour definitions and are not inadvertently affected. */
+.sgpa-chart .analytics-bar {
+  background: var(--gold);
+}
+
+/* Analytics bar-item value and label text (class analytics section) */
+.analytics-bar-item > strong {
+  color: #102a43;
+}
+.analytics-bar-item > span {
+  color: #17212b;
+}
+.analytics-bar-item > small {
+  color: #526576;
+}
+
+/* Responsive safeguards – confirm readability at 360–768 px */
+@media (max-width: 768px) {
+  .chart-item span { font-size: .75rem; }
+  .chart-item small { font-size: .68rem; }
+  .chart-card th,
+  .table-section th { font-size: .78rem; padding: 8px 9px; }
+  .chart-card td,
+  .table-section td { font-size: .8rem; padding: 8px 9px; }
+}
+@media (max-width: 390px) {
+  .chart-item span { font-size: .7rem; }
+  .chart-item small { font-size: .64rem; }
+}
+
