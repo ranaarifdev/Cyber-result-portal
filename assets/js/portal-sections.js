@@ -30,39 +30,66 @@
         const semester = (student.semesters || []).find((entry) => Number(entry.semesterNumber) === semesterNumber);
         if (!semester) return;
         
-        // Use CGPA if available (semester 2+), otherwise use SGPA (semester 1)
-        const gpa = semesterNumber === 1 ? semester.sgpa : (semester.cgpa || semester.sgpa);
-        if (gpa === null || gpa === undefined || Number.isNaN(Number(gpa))) return;
+        // Use cumulative CGPA for this semester (for Semester 1, SGPA is the cumulative CGPA)
+        const cgpaValue = semester.cgpa !== null && semester.cgpa !== undefined ? semester.cgpa : semester.sgpa;
+        if (cgpaValue === null || cgpaValue === undefined || Number.isNaN(Number(cgpaValue))) return;
         
         rows.push({
           name: student.name,
           rollNumber: student.rollNumber,
-          gpa: Number(gpa),
+          cgpa: Number(cgpaValue),
           semesterNumber
         });
       });
-      rows.sort((a, b) => Number(b.gpa) - Number(a.gpa) || a.name.localeCompare(b.name) || a.rollNumber.localeCompare(b.rollNumber));
+      rows.sort((a, b) => Number(b.cgpa) - Number(a.cgpa) || a.name.localeCompare(b.name) || a.rollNumber.localeCompare(b.rollNumber));
       return {
         semesterNumber,
         students: rows.slice(0, 10).map((student, index) => ({
           rank: index + 1,
           name: student.name,
           rollNumber: student.rollNumber,
-          cgpa: Number(student.gpa),
+          cgpa: Number(student.cgpa),
           semesterNumber: student.semesterNumber
         }))
       };
     });
   }
 
-  function renderMerit(analytics, semesterTop10) {
+  function calculateOverallCGPARanking(students) {
+    const rows = [];
+    (students || []).forEach((student) => {
+      let cgpa = student.overallCGPA;
+      if (cgpa === null || cgpa === undefined || Number.isNaN(Number(cgpa))) {
+        const sortedSems = (student.semesters || []).slice().sort((a, b) => Number(b.semesterNumber) - Number(a.semesterNumber));
+        if (sortedSems[0]) {
+          cgpa = sortedSems[0].cgpa !== null && sortedSems[0].cgpa !== undefined ? sortedSems[0].cgpa : sortedSems[0].sgpa;
+        }
+      }
+      if (cgpa !== null && cgpa !== undefined && !Number.isNaN(Number(cgpa))) {
+        rows.push({
+          name: student.name,
+          rollNumber: student.rollNumber,
+          cgpa: Number(cgpa)
+        });
+      }
+    });
+    rows.sort((a, b) => Number(b.cgpa) - Number(a.cgpa) || a.name.localeCompare(b.name) || a.rollNumber.localeCompare(b.rollNumber));
+    return rows.slice(0, 10).map((student, index) => ({
+      rank: index + 1,
+      name: student.name,
+      rollNumber: student.rollNumber,
+      cgpa: Number(student.cgpa)
+    }));
+  }
+
+  function renderMerit(overallRankings, semesterTop10, methodologyText) {
     const target = document.querySelector("#merit-content");
-    const rankings = analytics.merit.cgpaRanking.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]);
+    const rankings = overallRankings.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]);
     const grid = el("div", "merit-grid");
 
     const semesterCard = el("article", "content-card");
     const semesterTables = semesterTop10.map((semester) => {
-      const tableNode = table(["Rank", "Student", "Roll number", "GPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]));
+      const tableNode = table(["Rank", "Student", "Roll number", "CGPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]));
       const wrapper = el("div", "semester-rankings");
       const title = el("h4", "", `Semester ${semester.semesterNumber}`);
       wrapper.append(title, tableNode);
@@ -75,11 +102,15 @@
     cgpaCard.append(el("h3", "", "CGPA ranking"), table(["Rank", "Student", "Roll number", "CGPA"], rankings));
     grid.append(semesterCard, cgpaCard);
     target.replaceChildren(grid);
-    document.querySelector("#merit-methodology").textContent = analytics.merit.methodology;
+    const methodologyEl = document.querySelector("#merit-methodology");
+    if (methodologyEl) {
+      methodologyEl.textContent = methodologyText || "Rankings are generated automatically based on official cumulative CGPA values of every semester. Ties are sorted by student name and incomplete records are excluded.";
+    }
   }
 
   function bindFeedback() {
     const form = document.querySelector("#feedback-form");
+    if (!form) return;
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const status = document.querySelector("#feedback-status");
@@ -100,24 +131,40 @@
   async function init() {
     bindFeedback();
     try {
-      const analyticsUrl = new URL("assets/data/class-analytics.json", document.baseURI);
       const studentsUrl = new URL("assets/data/students.json", document.baseURI);
-      const [analyticsResponse, studentsResponse] = await Promise.all([
-        fetch(analyticsUrl, { cache: "no-store" }),
-        fetch(studentsUrl, { cache: "no-store" })
-      ]);
-      if (!analyticsResponse.ok) throw new Error("Portal section data request failed");
+      const studentsResponse = await fetch(studentsUrl, { cache: "no-store" });
       if (!studentsResponse.ok) throw new Error("Student dataset request failed");
-      const analytics = await analyticsResponse.json();
       const studentsData = await studentsResponse.json();
-      if (!analytics.merit || !Array.isArray(analytics.merit.cgpaRanking)) throw new Error("Portal section data is invalid");
       if (!studentsData || !Array.isArray(studentsData.students)) throw new Error("Student dataset is invalid");
+
+      let overallRankings = null;
+      let methodology = "Rankings are generated automatically from official cumulative CGPA values for each semester. Ties are retained and incomplete records are excluded.";
+
+      try {
+        const analyticsUrl = new URL("assets/data/class-analytics.json", document.baseURI);
+        const analyticsResponse = await fetch(analyticsUrl, { cache: "no-store" });
+        if (analyticsResponse.ok) {
+          const analytics = await analyticsResponse.json();
+          if (analytics.merit && Array.isArray(analytics.merit.cgpaRanking)) {
+            overallRankings = analytics.merit.cgpaRanking;
+            if (analytics.merit.methodology) methodology = analytics.merit.methodology;
+          }
+        }
+      } catch {
+        // Fallback to computing overall rankings from students dataset
+      }
+
+      if (!overallRankings) {
+        overallRankings = calculateOverallCGPARanking(studentsData.students);
+      }
+
       const semesterTop10 = calculateSemesterTop10(studentsData.students);
-      renderMerit(analytics, semesterTop10);
+      renderMerit(overallRankings, semesterTop10, methodology);
     } catch (error) {
       console.error("Unable to load portal sections", error);
       ["#merit-content"].forEach((selector) => {
-        const target = document.querySelector(selector); if (target) target.replaceChildren(el("p", "unavailable-note", "Verified section data is currently unavailable."));
+        const target = document.querySelector(selector);
+        if (target) target.replaceChildren(el("p", "unavailable-note", "Verified section data is currently unavailable."));
       });
     }
   }
