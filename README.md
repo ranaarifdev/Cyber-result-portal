@@ -2,6 +2,12 @@
 
 Static result portal for the BS Cyber Security evening session (2023-2027).
 
+## Project location
+
+- Local workspace path: `D:\websites\Generate trnscript`
+- GitHub repository: [ranaarifdev/Cyber-result-portal](https://github.com/ranaarifdev/Cyber-result-portal)
+- GitHub Pages site: [Cyber Result Portal](https://ranaarifdev.github.io/Cyber-result-portal/)
+
 ## Run locally
 
 ```bash
@@ -19,15 +25,18 @@ Open `http://localhost:5500/` in a browser. A web server is required because the
 
 ## Project structure
 
-- `index.html` and `pages/`: portal pages.
+- `index.html`: landing portal page.
+- `pages/`: secondary portal pages such as result detail, privacy, terms, and about content.
 - `assets/css/`: portal, document, analytics, and print styles.
-- `assets/js/`: search, rendering, print, and portal interaction code.
-- `assets/data/`: JSON consumed by the running site.
+- `assets/js/`: search, rendering, print, analytics, and portal interaction logic.
+- `assets/data/`: JSON datasets consumed by the site.
+- `assets/images/`: static UI assets and branding.
 - `service-worker.js`: offline cache configuration.
+- `LICENSE`, `.gitignore`, and `.nojekyll`: project and hosting configuration files.
 
 ## Deployment
 
-Publish the project root to GitHub Pages. All application URLs are relative, so the portal supports repository subpaths such as [Cyber Result Portal](https://ranaarifdev.github.io/Cyber-result-portal/).
+Publish the project root to GitHub Pages. All application URLs are relative, so the portal supports repository subpaths and the live site is available at [Cyber Result Portal](https://ranaarifdev.github.io/Cyber-result-portal/).
 
 ## Privacy
 

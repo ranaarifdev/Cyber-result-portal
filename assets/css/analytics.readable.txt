@@ -1,0 +1,173 @@
+.class-analytics{margin-bottom:70px}
+.analytics-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;padding-top:15px}
+.analytics-heading h2{font:700 clamp(2.2rem,5vw,4rem) Georgia,serif;color:var(--navy);margin:.15em 0}
+.analytics-heading>div:first-child{max-width:700px}
+.analytics-heading p{color:var(--muted)}
+.analytics-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.analytics-status{min-height:220px;display:grid;place-content:center;text-align:center}
+.class-analytics h3{color:var(--navy);margin-top:32px}
+.analytics-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.analytics-stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;min-width:0}
+.analytics-stat span{display:block;color:var(--muted);font-size:.78rem}
+.analytics-stat strong{display:block;font:700 1.6rem Georgia,serif;color:var(--navy);overflow-wrap:anywhere}
+.semester-analytics-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.semester-analytics-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:10px;padding:19px}
+.semester-analytics-card h4{font:700 1.3rem Georgia,serif;color:var(--navy);margin:0 0 10px}
+.semester-analytics-card dl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:0}
+.semester-analytics-card dt{color:var(--muted);font-size:.82rem}
+.semester-analytics-card dd{margin:0;font-weight:750;text-align:right}
+.performance{display:inline-block;padding:3px 8px;border-radius:999px;background:#e5edf4;color:var(--navy);font-size:.72rem}
+.performance.excellent{background:#d9f4e4;color:#175b35}
+.performance.good{background:#e4f0fb;color:#174f77}
+.performance.satisfactory{background:#fff0c9;color:#674c00}
+.performance.needs-improvement{background:#fde3e5;color:#8b1c2a}
+.analytics-panel{background:#fff;border:1px solid var(--line);border-radius:12px;margin-top:18px}
+.analytics-panel summary{cursor:pointer;padding:17px 20px;font-weight:800;color:var(--navy)}
+.analytics-panel[open] summary{border-bottom:1px solid var(--line)}
+.panel-body{padding:20px}
+.analytics-chart{height:250px;display:flex;align-items:end;gap:18px;border-bottom:1px solid var(--line);padding:20px}
+.analytics-bar-item{height:100%;flex:1;display:flex;flex-direction:column;justify-content:end;align-items:center;min-width:42px}
+.analytics-bar-item strong{font-size:.78rem}
+.analytics-bar{width:min(70px,100%);background:var(--navy);border-radius:5px 5px 0 0;min-height:2px}
+.sgpa-chart .analytics-bar{background:var(--gold)}
+.analytics-bar-item span{font-size:.74rem;font-weight:750;padding-top:5px}
+.analytics-bar-item small{font-size:.67rem;color:var(--muted);text-align:center}
+.chart-table{margin-top:18px}
+.chart-table table{font-size:.82rem}
+.subject-rankings{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.subject-rankings section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-top:18px}
+.subject-rankings h3{margin-top:0}
+.unavailable-note{border-left:4px solid var(--gold);background:#fff8e7;padding:14px;color:#5c4717}
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.coverage-item{border:1px solid var(--line);padding:12px;border-radius:8px}
+.coverage-item strong{display:block;color:var(--navy)}
+select{padding:9px 12px;border:1px solid #9bacb9;border-radius:8px;background:#fff;margin:0 0 12px 8px}
+.analytics-method-note{border-left:4px solid var(--navy);padding:2px 20px 15px;margin-top:24px}
+.methodology-dialog{width:min(720px,calc(100% - 24px));border:0;border-radius:14px;padding:0;box-shadow:0 24px 70px rgba(0,0,0,.3)}
+.methodology-dialog::backdrop{background:rgba(5,20,34,.72)}
+.dialog-heading{display:flex;justify-content:space-between;align-items:start;gap:20px;background:var(--navy);color:#fff;padding:18px 22px}
+.dialog-heading h2{margin:0;font:700 1.55rem Georgia,serif}
+.dialog-heading button{border:0;background:transparent;color:#fff;font-size:2rem;line-height:1;cursor:pointer}
+.methodology-dialog #methodology-content{padding:20px 24px;max-height:65vh;overflow:auto}
+.methodology-dialog h3{color:var(--navy)}
+
+@media(max-width:900px){.analytics-heading{display:block}
+.analytics-actions{justify-content:flex-start}
+.analytics-summary{grid-template-columns:repeat(2,1fr)}
+.semester-analytics-cards{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:600px){.analytics-summary,.semester-analytics-cards,.subject-rankings,.coverage-grid{grid-template-columns:1fr}
+.analytics-actions{display:grid}
+.analytics-chart{overflow-x:auto;gap:10px;padding-inline:8px}
+.analytics-bar-item{min-width:55px}
+.panel-body{padding:13px}
+}
+
+@media(max-width:600px){.analytics-heading,.analytics-heading>div{min-width:0;max-width:100%}
+.analytics-heading h2{font-size:1.95rem;overflow-wrap:anywhere}
+.class-analytics{overflow:hidden}
+.analytics-panel,.semester-analytics-card{min-width:0;max-width:100%}
+.semester-analytics-card dl{grid-template-columns:minmax(0,1fr) auto;min-width:0}
+.semester-analytics-card dd{min-width:0;max-width:120px;overflow-wrap:anywhere}
+.semester-analytics-card{padding:15px}
+}
+
+@media(prefers-color-scheme:dark){.class-analytics{color:#e7edf2}
+.analytics-heading h2,.class-analytics>div>section>h3,.class-analytics>.analytics-heading+*+*>section>h3,.class-analytics .analytics-method-note h3{color:#f2f6f9}
+.analytics-stat,.semester-analytics-card,.analytics-panel,.subject-rankings section{background:#152c40;border-color:#365064;color:#e7edf2}
+.analytics-stat strong,.semester-analytics-card h4,.analytics-panel summary,.subject-rankings h3,.coverage-item strong,.subject-card h4{color:#f2f6f9}
+.analytics-stat span,.semester-analytics-card dt,.analytics-bar-item small{color:#b8c8d4}
+.analytics-panel[open] summary,.coverage-item,.subject-card{border-color:#365064}
+.analytics-bar{background:#72a8d1}
+.unavailable-note{background:#473c1d;color:#fff0bf}
+select,.mz-toolbar input,.supply-filters input,.supply-filters select{background:#0e2233;color:#fff;border-color:#6f8597}
+.mz-note{background:#18384d;color:#dbeaf5}
+.supply-consent{background:#20384c}
+.supply-privacy-warning{background:#4a2027;color:#ffdfe3}
+}
+
+.subject-card{border:1px solid var(--line);padding:12px;border-radius:8px;margin-top:8px}
+.subject-card h4{margin:0;color:var(--navy)}
+.subject-card p{margin:4px 0;font-size:.82rem}
+.supply-privacy-warning{background:#fde8e9;border-left:4px solid var(--danger);padding:14px;color:#721b26}
+.supply-consent{padding:18px;background:var(--soft);margin-top:12px}
+.supply-consent .button{margin-right:8px}
+.supply-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.supply-filters{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end}
+.supply-filters label{font-size:.78rem;font-weight:700}
+.supply-filters input,.supply-filters select{width:100%;margin:3px 0 0;padding:9px;border:1px solid #9bacb9;border-radius:7px}
+.supply-student-group{border:1px solid var(--line);border-radius:8px;margin:9px 0;padding:12px}
+.supply-student-group h4{margin:0 0 6px;color:var(--navy)}
+.supply-student-group ul{margin:0;padding-left:20px}
+.supply-chart .analytics-bar{background:var(--danger)}
+
+.mz-note{background:#e8f2f8;border-left:4px solid var(--navy);padding:14px;color:var(--navy)}
+.mz-participants .analytics-summary{grid-template-columns:repeat(3,1fr)}
+.mz-toolbar{display:flex;align-items:end;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.mz-toolbar label{font-size:.78rem;font-weight:700}
+.mz-toolbar input,.mz-toolbar select{display:block;min-width:220px;margin:3px 0 0;padding:9px;border:1px solid #9bacb9;border-radius:7px}
+.mz-toolbar .button{margin-bottom:0}
+
+@media(max-width:700px){.supply-filters{grid-template-columns:1fr}
+.supply-toolbar{display:grid}
+}
+
+@media(max-width:600px){.mz-participants .analytics-summary{grid-template-columns:1fr}
+.mz-toolbar{display:grid}
+.mz-toolbar input,.mz-toolbar select{width:100%;min-width:0}
+}
+
+
+/* Narrow-screen analytics safeguards */
+.analytics-panel,.analytics-stat,.semester-analytics-card,.subject-rankings section,.supply-student-group{overflow-wrap:anywhere}
+.analytics-panel summary{list-style-position:outside}
+.methodology-dialog{max-height:min(88dvh,820px);overflow:hidden}
+.methodology-dialog #methodology-content{max-height:calc(88dvh - 74px);overscroll-behavior:contain}
+.dialog-heading button{min-width:44px;min-height:44px}
+.analytics-chart{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}
+.supply-filters>*{min-width:0}
+.supply-toolbar .button,.mz-toolbar .button{white-space:normal}
+.mz-participants,.supply-details-panel{min-width:0;max-width:100%}
+
+@media(max-width:760px){.analytics-heading{padding-top:8px}
+.analytics-heading h2{font-size:clamp(1.8rem,9vw,2.6rem)}
+.analytics-actions{display:grid;grid-template-columns:1fr 1fr}
+.analytics-actions .button{width:100%;white-space:normal}
+.analytics-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+.analytics-stat{padding:14px}
+.analytics-stat strong{font-size:1.35rem}
+.semester-analytics-cards{grid-template-columns:1fr}
+.subject-rankings{grid-template-columns:1fr}
+.analytics-panel summary{padding:15px 16px}
+.panel-body{padding:14px 10px}
+.analytics-chart{height:220px;padding:14px 8px}
+.coverage-grid{grid-template-columns:1fr 1fr}
+.supply-toolbar{display:grid;grid-template-columns:1fr 1fr}
+.supply-filters{grid-template-columns:1fr 1fr}
+.supply-consent .button{margin:6px 4px 0 0}
+.mz-toolbar{display:grid;grid-template-columns:1fr 1fr}
+.mz-toolbar label,.mz-toolbar .button{min-width:0}
+.mz-toolbar input,.mz-toolbar select{width:100%;min-width:0}
+.methodology-dialog{width:calc(100% - 16px)}
+.dialog-heading{padding:15px 14px}
+.dialog-heading h2{font-size:1.25rem}
+.methodology-dialog #methodology-content{padding:16px 14px}
+}
+
+@media(max-width:480px){.analytics-actions,.supply-toolbar,.supply-filters,.mz-toolbar,.coverage-grid{grid-template-columns:1fr}
+.analytics-summary{gap:8px}
+.analytics-stat{padding:12px}
+.analytics-stat span{font-size:.72rem}
+.analytics-stat strong{font-size:1.2rem}
+.analytics-panel{margin-top:14px}
+.analytics-bar-item{min-width:48px}
+.panel-body{padding:12px 8px}
+.supply-privacy-warning,.supply-consent,.mz-note{padding:12px}
+.supply-consent .button,.supply-toolbar .button,.mz-toolbar .button{width:100%;margin:6px 0 0}
+.class-analytics h3{font-size:1.08rem}
+}
+
+@media(prefers-reduced-motion:reduce){.analytics-panel[open]>.panel-body,.methodology-dialog[open],.methodology-dialog[open]::backdrop{animation:none!important}
+}
+
