@@ -18,7 +18,7 @@
       <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="board-nav"><span aria-hidden="true">☰</span> Menu</button>
     </div>
     <nav class="board-nav" id="board-nav" aria-label="Primary navigation"><div class="shell board-nav-inner">
-      <a href="#home">Home</a><a href="#check-result">Check Result</a><a href="#merit">Merit</a><a href="#notices">Notices &amp; Downloads</a><a href="#grading">Grading System</a><a href="#faq-help">FAQ &amp; Help</a><a href="#about-contact">About &amp; Contact</a>
+      <a href="#home">Home</a><a href="#check-result">Check Result</a><a href="#merit">Merit</a><a href="#mz-records">MZ Records</a><a href="#notices">Notices &amp; Downloads</a><a href="#grading">Grading System</a><a href="#faq-help">FAQ &amp; Help</a><a href="#about-contact">About &amp; Contact</a>
     </div></nav>
   </header>
   <main id="main">
@@ -45,6 +45,7 @@
       <div class="quick-access" aria-label="Quick access"><a href="#check-result"><strong>Check Result</strong><span>Search by roll number</span></a><a href="#merit"><strong>Merit</strong><span>Verified toppers and ranking</span></a><a href="#notices"><strong>Downloads</strong><span>Result and transcript help</span></a><a href="#grading"><strong>Grading</strong><span>Academic guide</span></a><a href="#faq-help"><strong>FAQ &amp; Help</strong><span>Support and guidance</span></a></div>
     </section>
     <section class="shell board-section" id="merit" aria-labelledby="merit-title"><span class="kicker">Verified achievement</span><h2 id="merit-title">Merit / Top Students</h2><p>Rankings are generated automatically from official SGPA and CGPA values. Ties are retained and incomplete records are excluded from CGPA ranking.</p><div id="merit-content" class="section-loading"><span class="spinner" aria-hidden="true"></span><span>Calculating verified rankings…</span></div><details class="content-details"><summary>Ranking methodology</summary><p id="merit-methodology"></p></details></section>
+    <section class="shell board-section" id="mz-records" aria-labelledby="mz-records-title"><span class="kicker">Pre-medical mathematics</span><h2 id="mz-records-title">MZ (Zero Math) Records</h2><p>Students who enrolled in MZ-111 (1st semester) and/or MZ-112 (2nd semester) – typically Pre-Medical students. Grade point 2.0–4.0 = Pass; 0.0 = Fail.</p><div id="mz-content" class="section-loading"><span class="spinner" aria-hidden="true"></span><span>Loading MZ records…</span></div></section>
     <section class="shell board-section" id="notices" aria-labelledby="notices-title"><span class="kicker">Academic documents</span><h2 id="notices-title">Notices &amp; Downloads</h2><div class="download-grid"><article><h3>Student Transcript PDF</h3><p>Search for a student, open Complete Transcript, and select Download Transcript as PDF.</p><a class="button" href="#check-result">Find student transcript</a></article><article><h3>Semester Result PDF</h3><p>Open Semester Result Cards for a verified student and save the selected card as PDF.</p><a class="button" href="#check-result">Find semester result</a></article></div></section>
     <section class="shell board-section" id="grading" aria-labelledby="grading-title"><span class="kicker">Academic calculation guide</span><h2 id="grading-title">Grading System</h2><div class="grading-grid"><div><h3>Verified portal interpretation</h3><div class="table-scroll"><table><thead><tr><th scope="col">Recorded grade point</th><th scope="col">Portal course outcome</th></tr></thead><tbody><tr><td>2.00–4.00</td><td>Passed</td></tr><tr><td>0.00</td><td>Supply / non-passed</td></tr></tbody></table></div><p class="field-help">Letter grades and course credit hours are not present in the verified source files and are therefore not invented.</p></div><div><h3>SGPA and CGPA formulas</h3><p><strong>SGPA</strong> = Σ(course grade point × course credit hours) ÷ Σ(semester credit hours)</p><p><strong>CGPA</strong> = Σ(all quality points) ÷ Σ(all attempted credit hours)</p><p>The portal displays the official supplied SGPA/CGPA values because source credit hours are unavailable.</p><details><summary>Illustrative calculation</summary><p>If two example courses both carry 3 credits with grade points 4.0 and 3.0, SGPA = (4×3 + 3×3) ÷ 6 = 3.50. This is a formula illustration, not a student record.</p></details></div></div></section>
     <section class="shell board-section" id="about-contact" aria-labelledby="about-contact-title">
@@ -76,5 +77,6 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/search.js"></script>
   <script src="assets/js/portal-sections.js"></script>
+  <script src="assets/js/mz-records.js"></script>
 </body>
 </html>
