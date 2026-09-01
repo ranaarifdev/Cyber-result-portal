@@ -24,22 +24,27 @@
       const rows = [];
       students.forEach((student) => {
         const semester = (student.semesters || []).find((entry) => Number(entry.semesterNumber) === semesterNumber);
-        if (!semester || semester.sgpa === null || semester.sgpa === undefined || Number.isNaN(Number(semester.sgpa))) return;
+        if (!semester) return;
+        
+        // Use CGPA if available (semester 2+), otherwise use SGPA (semester 1)
+        const gpa = semesterNumber === 1 ? semester.sgpa : (semester.cgpa || semester.sgpa);
+        if (gpa === null || gpa === undefined || Number.isNaN(Number(gpa))) return;
+        
         rows.push({
           name: student.name,
           rollNumber: student.rollNumber,
-          sgpa: Number(semester.sgpa),
+          gpa: Number(gpa),
           semesterNumber
         });
       });
-      rows.sort((a, b) => Number(b.sgpa) - Number(a.sgpa) || a.name.localeCompare(b.name) || a.rollNumber.localeCompare(b.rollNumber));
+      rows.sort((a, b) => Number(b.gpa) - Number(a.gpa) || a.name.localeCompare(b.name) || a.rollNumber.localeCompare(b.rollNumber));
       return {
         semesterNumber,
         students: rows.slice(0, 10).map((student, index) => ({
           rank: index + 1,
           name: student.name,
           rollNumber: student.rollNumber,
-          sgpa: Number(student.sgpa),
+          cgpa: Number(student.gpa),
           semesterNumber: student.semesterNumber
         }))
       };
@@ -53,7 +58,7 @@
 
     const semesterCard = el("article", "content-card");
     const semesterTables = semesterTop10.map((semester) => {
-      const tableNode = table(["Rank", "Student", "Roll number", "SGPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.sgpa).toFixed(2)]));
+      const tableNode = table(["Rank", "Student", "Roll number", "CGPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]));
       const wrapper = el("div", "semester-rankings");
       const title = el("h4", "", `Semester ${semester.semesterNumber}`);
       wrapper.append(title, tableNode);
