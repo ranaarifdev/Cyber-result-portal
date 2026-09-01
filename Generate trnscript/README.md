@@ -27,9 +27,7 @@ Open `http://localhost:5500/` in a browser. A web server is required because the
 
 ## Deployment
 
-Publish the project root to GitHub Pages. All application URLs are relative, so the portal supports repository subpaths such as [
-    
-](https://ranaarifdev.github.io/Cyber-result-portal/).
+Publish the project root to GitHub Pages. All application URLs are relative, so the portal supports repository subpaths such as [Cyber Result Portal](https://ranaarifdev.github.io/Cyber-result-portal/).
 
 ## Privacy
 
