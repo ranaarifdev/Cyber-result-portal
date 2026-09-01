@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_VERSION = "student-result-portal-v21-bugfix";
+const CACHE_VERSION = "student-result-portal-v22-mobile-responsive-fix";
 const APP_ASSETS = [
   "./",
   "./index.html",

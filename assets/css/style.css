@@ -199,16 +199,22 @@ button:focus-visible, input:focus-visible, a:focus-visible,
 .section-loading { min-height: 140px; display: flex; align-items: center; justify-content: center; gap: 12px; }
 
 /* Merit */
-.merit-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.merit-grid  { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; width: 100%; max-width: 100%; }
+.merit-grid > * { min-width: 0; max-width: 100%; }
 .merit-grid .content-card h3 { color: var(--navy); }
-.merit-grid .semester-rankings { margin-top: 16px; }
+.merit-grid .semester-rankings { margin-top: 16px; min-width: 0; }
 .merit-grid .semester-rankings h4 { margin: 0 0 10px; color: var(--navy); font-size: 1rem; }
 .merit-grid .semester-rankings .table-scroll { margin-top: 8px; }
+.merit-grid table th, .merit-grid table td { padding: 8px 10px; font-size: .84rem; }
+.merit-grid table th:first-child, .merit-grid table td:first-child { width: 44px; text-align: center; }
+.merit-grid table th:nth-child(2), .merit-grid table td:nth-child(2) { min-width: 130px; }
+.merit-grid table th:nth-child(3), .merit-grid table td:nth-child(3) { white-space: nowrap; font-size: .8rem; }
+.merit-grid table th:last-child, .merit-grid table td:last-child { width: 55px; text-align: right; font-weight: 700; }
 
 /* Content, download, help, grading cards */
 .content-card, .download-grid article, .help-grid article, .grading-grid > div, .notice-card, .feedback-form {
   background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
-  color: var(--ink);
+  color: var(--ink); min-width: 0; max-width: 100%; box-sizing: border-box;
 }
 .content-card h3, .download-grid h3, .grading-grid h3, .help-grid h3,
 .notice-card h3, .feedback-form h3 { margin-top: 0; color: var(--navy); }
@@ -366,12 +372,20 @@ button:focus-visible, input:focus-visible, a:focus-visible,
 .bar { width: 100%; background: var(--navy); border-radius: 6px 6px 0 0; }
 
 /* Tables (global) */
-.table-scroll { overflow-x: auto; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
-.table-scroll table { min-width: 650px; }
+.table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  display: block;
+}
+.table-scroll table { width: 100%; min-width: 100%; border-collapse: collapse; }
 table  { border-collapse: collapse; width: 100%; }
-th, td { padding: 10px 12px; text-align: left; border: 1px solid #c8d2dc; }
-th { background: #eef2f5; color: var(--navy); font-size: .82rem; font-weight: 700; }
-td { background: #fff; color: var(--ink); }
+th, td { padding: 9px 11px; text-align: left; border: 1px solid #c8d2dc; }
+th { background: #eef2f5; color: var(--navy); font-size: .82rem; font-weight: 700; white-space: nowrap; }
+td { background: #fff; color: var(--ink); font-size: .88rem; }
 tbody tr:nth-child(even) td { background: #f4f7fa; }
 tbody tr:hover td            { background: #e8f0f7; color: var(--ink); }
 
