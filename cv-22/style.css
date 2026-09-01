@@ -1,8 +1,0 @@
-@import url('../simple-base.css');
-body { font-family: Georgia, 'Times New Roman', serif; }
-.cv-page { color: #2d2925; }
-header { text-align: center; border-top: 5mm solid #3e3934; border-bottom: 1px double #3e3934; }
-.contact { justify-content: center; }
-h1 { font-family: Georgia, 'Times New Roman', serif; letter-spacing: 1px; }
-h2 { text-align: center; border-bottom: 1px solid #8f877e; font-weight: 400; }
-.title { color: #675d54; }
