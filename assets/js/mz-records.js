@@ -2,10 +2,14 @@
 
 (() => {
   if (document.body.dataset.page !== "home") return;
-  const el = (tag, className, text) => {
+  const el = (tag, className, textOrChildren) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (text !== undefined) node.textContent = text;
+    if (Array.isArray(textOrChildren)) {
+      textOrChildren.filter(Boolean).forEach((child) => node.append(child));
+    } else if (textOrChildren !== undefined) {
+      node.textContent = textOrChildren;
+    }
     return node;
   };
   const table = (headers, rows) => {

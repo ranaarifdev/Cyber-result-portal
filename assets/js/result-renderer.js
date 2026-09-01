@@ -118,29 +118,23 @@
   function renderSupplyHistory() {
     const supplyRecords = (state.supplyData.records || []).filter((record) => window.PortalUtils.normalizeRoll(record.rollNumber) === window.PortalUtils.normalizeRoll(state.student.rollNumber));
     const section = U.el("div", { className: "supply-history-view" });
-    section.append(U.el("div", { className: "section-heading" }, [U.el("div", {}, [U.el("p", { className: "kicker", text: "Academic history" }), U.el("h2", { text: "Supply / Fail record" })]), U.el("p", { text: `${supplyRecords.length} subject(s) with supply or fail status` })]));
+    section.append(U.el("div", { className: "section-heading" }, [U.el("div", {}, [U.el("p", { className: "kicker", text: "Academic history" }), U.el("h2", { text: "Supply / Fail Record" })]), U.el("p", { text: `${supplyRecords.length} subject${supplyRecords.length === 1 ? "" : "s"} with supply or fail status` })]));
     if (supplyRecords.length === 0) {
-      section.append(U.el("div", { className: "data-warning", text: "No supply or fail records found for this student. Student has cleared all subjects in attempted semesters." }));
+      section.append(U.el("div", { className: "data-warning", text: "No supply or fail records found for this student. All attempted subjects have been cleared." }));
       panel.replaceChildren(section);
       return;
     }
-    const byStatus = {};
+    const bySemester = {};
     supplyRecords.forEach((record) => {
-      if (!byStatus[record.status]) byStatus[record.status] = [];
-      byStatus[record.status].push(record);
+      const key = record.semesterNumber || "Unknown";
+      if (!bySemester[key]) bySemester[key] = [];
+      bySemester[key].push(record);
     });
-    Object.entries(byStatus).forEach(([status, records]) => {
-      const bySemester = {};
-      records.forEach((record) => {
-        if (!bySemester[record.semesterNumber]) bySemester[record.semesterNumber] = [];
-        bySemester[record.semesterNumber].push(record);
-      });
+    Object.entries(bySemester).sort((a, b) => Number(a[0]) - Number(b[0])).forEach(([semNum, sems]) => {
       const statusCard = U.el("article", { className: "supply-status-card" });
-      statusCard.append(U.el("h3", { text: status }));
-      Object.entries(bySemester).sort((a, b) => Number(a[0]) - Number(b[0])).forEach(([semNum, sems]) => {
-        const rows = sems.map((r) => [r.courseCode, r.courseTitle, r.gradePoint.toFixed(1)]);
-        statusCard.append(U.el("h4", { text: `Semester ${semNum}` }), U.el("div", { className: "table-scroll" }, resultTable(["Code", "Subject", "Grade"], rows)));
-      });
+      statusCard.append(U.el("h3", { text: `Semester ${semNum}` }));
+      const rows = sems.map((r) => [r.courseCode, r.courseTitle, typeof r.gradePoint === "number" ? r.gradePoint.toFixed(1) : U.display(r.gradePoint), U.display(r.status)]);
+      statusCard.append(U.el("div", { className: "table-scroll" }, resultTable(["Code", "Subject", "Grade Point", "Status"], rows)));
       section.append(statusCard);
     });
     panel.replaceChildren(section);

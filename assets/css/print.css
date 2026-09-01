@@ -10,7 +10,7 @@ thead{display:table-header-group}
 tr,.transcript-semester{break-inside:avoid;page-break-inside:avoid}
 .semester-document{font-size:10px}
 .semester-document .document-header{margin-bottom:5mm}
-.semester-document .signature-row{margin-top:28mm}
+.semester-document .signature-row{margin-top:200px}
 .semester-document table{font-size:9px}
 .semester-document th,.semester-document td{padding:2.2mm 2.5mm}
 .transcript-document{font-size:7.5px;line-height:1.12;padding:0!important}

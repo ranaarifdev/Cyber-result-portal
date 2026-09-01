@@ -2,10 +2,14 @@
 
 (() => {
   if (document.body.dataset.page !== "home") return;
-  const el = (tag, className, text) => {
+  const el = (tag, className, textOrChildren) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (text !== undefined) node.textContent = text;
+    if (Array.isArray(textOrChildren)) {
+      textOrChildren.filter(Boolean).forEach((child) => node.append(child));
+    } else if (textOrChildren !== undefined) {
+      node.textContent = textOrChildren;
+    }
     return node;
   };
   const table = (headers, rows) => {
@@ -58,7 +62,7 @@
 
     const semesterCard = el("article", "content-card");
     const semesterTables = semesterTop10.map((semester) => {
-      const tableNode = table(["Rank", "Student", "Roll number", "CGPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]));
+      const tableNode = table(["Rank", "Student", "Roll number", "GPA"], semester.students.map((student) => [student.rank, student.name, student.rollNumber, Number(student.cgpa).toFixed(2)]));
       const wrapper = el("div", "semester-rankings");
       const title = el("h4", "", `Semester ${semester.semesterNumber}`);
       wrapper.append(title, tableNode);

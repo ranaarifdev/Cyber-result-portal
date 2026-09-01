@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_VERSION = "student-result-portal-v20-interface-refresh";
+const CACHE_VERSION = "student-result-portal-v21-bugfix";
 const APP_ASSETS = [
   "./",
   "./index.html",
@@ -15,6 +15,8 @@ const APP_ASSETS = [
   "./assets/js/app.js",
   "./assets/js/search.js",
   "./assets/js/portal-sections.js",
+  "./assets/js/mz-records.js",
+  "./assets/js/supply-history.js",
   "./assets/js/utils.js",
   "./assets/js/data-service.js",
   "./assets/js/print-manager.js",
