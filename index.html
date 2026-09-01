@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authorized local student result portal for Emerson University Multan.">
+  <title>Student Result Portal | Emerson University Multan</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/analytics.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+</head>
+<body data-page="home">
+  <div class="site-loader" id="site-loader" role="status" aria-live="polite"><div class="loader-mark"><img src="assets/images/university-logo.jpg" alt="" width="72" height="72"><span class="loader-ring" aria-hidden="true"></span></div><strong>Emerson University Multan</strong><span>Loading Student Result Portal…</span></div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell brand board-brand">
+      <img src="assets/images/university-logo.jpg" alt="Emerson University Multan logo" width="76" height="76">
+      <div><p class="eyebrow">Emerson University Multan</p><p>Department of Computing &amp; Emerging Technologies</p></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="board-nav"><span aria-hidden="true">☰</span> Menu</button>
+    </div>
+    <nav class="board-nav" id="board-nav" aria-label="Primary navigation"><div class="shell board-nav-inner">
+      <a href="#home">Home</a><a href="#check-result">Check Result</a><a href="#supply-history">Supply History</a><a href="#mz-participants">MZ</a><a href="#merit">Merit</a><a href="#downloads">Downloads</a><a href="#grading">Grading System</a><a href="#faq">FAQ</a><a href="#help">Help</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div></nav>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <span class="kicker">BS Cyber Security · Session 2023–2027 · Evening</span>
+        <h1>Student Result Portal</h1>
+        <p class="lead">Enter your exact roll number to view all available semester results and your consolidated academic record.</p>
+        <div class="privacy-banner" data-private-notice hidden><strong>Authorized-use notice:</strong> This portal is configured for local or authorized use. Static files are not encrypted.</div>
+      </div>
+      <div class="search-panel" id="check-result"><form id="search-form" class="search-card" novalidate>
+        <label for="roll-number">Enter roll number</label>
+        <div class="search-row">
+          <input id="roll-number" name="roll" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ECTE231122145" maxlength="24" aria-describedby="roll-help search-status">
+          <button type="submit">Search result</button>
+          <button type="reset" class="clear-button">Clear</button>
+        </div>
+        <p id="roll-help" class="field-help">Example: <button class="text-button" type="button" id="use-example">ECTE231122145</button></p>
+        <p id="search-status" class="form-status" role="status" aria-live="polite"></p>
+      </form></div>
+    </section>
+    <section class="shell portal-dashboard" id="home-overview" aria-labelledby="home-overview-title">
+      <div class="section-intro"><span class="kicker">At a glance</span><h2 id="home-overview-title">Portal overview</h2><p>Verified academic information and frequently used services in one place.</p></div>
+      <div class="quick-access" aria-label="Quick access"><a href="#check-result"><strong>Check Result</strong><span>Search by roll number</span></a><a href="#supply-history"><strong>Supply History</strong><span>Verified restricted records</span></a><a href="#mz-participants"><strong>MZ Participants</strong><span>Zero-credit Math records</span></a><a href="#merit"><strong>Merit</strong><span>Verified toppers and ranking</span></a><a href="#downloads"><strong>Downloads</strong><span>Result and transcript help</span></a></div>
+    </section>
+    <section id="class-analytics" class="class-analytics shell" aria-labelledby="analytics-title">
+      <div class="analytics-heading">
+        <div><span class="kicker">Verified result data</span><h2 id="analytics-title">Class Result Analytics</h2><p>Class-level outcomes are calculated from the imported official records. The MZ participant panel contains the requested identified enrollment details.</p></div>
+        <div class="analytics-actions no-print"><button type="button" class="button secondary" id="analytics-methodology">How These Statistics Are Calculated</button><button type="button" class="button secondary" id="analytics-print">Print Class Summary</button><button type="button" class="button" id="analytics-download">Save Class Summary as PDF</button></div>
+      </div>
+      <div id="analytics-status" class="analytics-status" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span><p>Calculating class analytics…</p></div>
+      <div id="analytics-content" hidden>
+        <section aria-labelledby="general-statistics-title"><h3 id="general-statistics-title">General portal statistics</h3><div id="analytics-summary" class="analytics-summary"></div></section>
+        <section aria-labelledby="semester-card-title"><h3 id="semester-card-title">Semester-wise result percentages</h3><div id="semester-analytics-cards" class="semester-analytics-cards"></div></section>
+        <details open class="analytics-panel"><summary>Semester comparison chart</summary><div class="panel-body"><div id="pass-chart" class="analytics-chart"></div><div id="pass-chart-table" class="chart-table"></div></div></details>
+        <details open class="analytics-panel"><summary>Average SGPA trend</summary><div class="panel-body"><div id="sgpa-chart" class="analytics-chart sgpa-chart"></div><div id="sgpa-chart-table" class="chart-table"></div></div></details>
+        <div class="subject-rankings">
+          <section><h3>Strong-Performing Subjects</h3><div id="strong-subjects"></div></section>
+          <section><h3>Subjects Needing Improvement</h3><div id="improvement-subjects"></div></section>
+        </div>
+        <section id="supply-history" aria-labelledby="supply-summary-title"><h3 id="supply-summary-title">Supply History</h3><p>Verified supply/fail course results for the approved 43-student cohort only.</p><div id="supply-summary-cards" class="analytics-summary"></div></section>
+        <details class="analytics-panel supply-details-panel" id="supply-details-panel"><summary>Supply History Details</summary><div class="panel-body">
+          <div class="supply-privacy-warning"><strong>Privacy Notice:</strong> This section contains identifiable academic result information. Publishing it through a public GitHub Pages repository makes the information accessible to anyone with the link and potentially visible in the website source files.</div>
+          <div id="supply-consent" class="supply-consent"><p>This section contains names, roll numbers, and verified supply/fail subjects for the approved 43-student cohort. Continue?</p><button type="button" class="button" id="supply-continue">Continue</button><button type="button" class="button secondary" id="supply-cancel">Cancel</button></div>
+          <div id="supply-content" hidden>
+            <div class="supply-toolbar no-print"><button type="button" class="button secondary" id="view-by-student">Group by Student</button><button type="button" class="button secondary" id="view-by-subject">Group by Semester</button><button type="button" class="button secondary" id="supply-print">Print Semester Supply Report</button><button type="button" class="button" id="supply-download">Save Supply Report as PDF</button></div>
+            <div class="supply-filters no-print"><label>Student name<input id="supply-name-search" type="search"></label><label>Roll number<input id="supply-roll-search" type="search"></label><label>Subject name<input id="supply-subject-search" type="search"></label><label>Course code<input id="supply-code-search" type="search"></label><label>Semester<select id="supply-semester-filter"><option value="all">All semesters</option></select></label><label>Subject<select id="supply-subject-filter"><option value="all">All subjects</option></select></label><button type="button" class="button secondary" id="supply-clear">Clear filters</button></div>
+            <div id="supply-records-view" class="supply-records-view"></div>
+          </div>
+        </div></details>
+        <details class="analytics-panel"><summary>Supply count chart</summary><div class="panel-body"><div id="supply-chart" class="analytics-chart supply-chart"></div><div id="supply-chart-table" class="chart-table"></div></div></details>
+        <details class="analytics-panel"><summary>Supply History Subjects with Highest Counts</summary><div class="panel-body" id="highest-supply-subjects"></div></details>
+        <section class="mz-participants" id="mz-participants" aria-labelledby="mz-participants-title">
+          <h3 id="mz-participants-title">MZ (Zero Math) Participants</h3>
+          <p class="mz-note"><strong>MZ (Zero Math) is a Zero Credit Hour subject and does NOT affect CGPA.</strong></p>
+          <p>Pre-Medical participants are detected automatically from verified positive MZ results; students with placeholder-only zero entries are excluded.</p>
+          <div id="mz-summary" class="analytics-summary"></div>
+          <details class="analytics-panel mz-records-panel"><summary>Pre-Medical MZ participant records</summary><div class="panel-body">
+            <div class="mz-toolbar no-print"><label>Search participants<input id="mz-search" type="search" placeholder="Name, roll number, or MZ code"></label><label>Sort by<select id="mz-sort"><option value="roll">Roll Number</option><option value="name">Student Name</option><option value="subject">MZ Subject</option><option value="result">Result</option><option value="cgpa">CGPA</option></select></label><button type="button" class="button secondary" id="mz-print">Print MZ List</button><button type="button" class="button" id="mz-download">Save MZ List as PDF</button></div>
+            <p id="mz-record-count" class="field-help"></p><div class="table-scroll" id="mz-participants-table"></div>
+          </div></details>
+        </section>
+        <details class="analytics-panel"><summary>Data coverage</summary><div class="panel-body" id="analytics-coverage"></div></details>
+        <details class="analytics-panel"><summary>Subject performance table</summary><div class="panel-body" id="subject-analytics-table"></div></details>
+        <section class="analytics-method-note"><h3>Methodology and privacy</h3><p>Class and subject statistics are aggregate. The identified MZ participant table is generated from verified enrollment records; missing semester records remain separate and are never counted as failures.</p><button type="button" class="text-button no-print" id="analytics-methodology-bottom">Read the calculation methodology</button></section>
+      </div>
+    </section>
+    <section class="shell board-section" id="merit" aria-labelledby="merit-title"><span class="kicker">Verified achievement</span><h2 id="merit-title">Merit / Top Students</h2><p>Rankings are generated automatically from official SGPA and CGPA values. Ties are retained and incomplete records are excluded from CGPA ranking.</p><div id="merit-content" class="section-loading"><span class="spinner" aria-hidden="true"></span><span>Calculating verified rankings…</span></div><details class="content-details"><summary>Ranking methodology</summary><p id="merit-methodology"></p></details></section>
+    <section class="shell board-section" id="downloads" aria-labelledby="downloads-title"><span class="kicker">Academic documents</span><h2 id="downloads-title">Downloads</h2><div class="download-grid"><article><h3>Student Transcript PDF</h3><p>Search for a student, open Complete Transcript, and select Download Transcript as PDF.</p><a class="button" href="#check-result">Find student transcript</a></article><article><h3>Semester Result PDF</h3><p>Open Semester Result Cards for a verified student and save the selected card as PDF.</p><a class="button" href="#check-result">Find semester result</a></article></div></section>
+    <section class="shell board-section" id="grading" aria-labelledby="grading-title"><span class="kicker">Academic calculation guide</span><h2 id="grading-title">Grading System</h2><div class="grading-grid"><div><h3>Verified portal interpretation</h3><div class="table-scroll"><table><thead><tr><th scope="col">Recorded grade point</th><th scope="col">Portal course outcome</th></tr></thead><tbody><tr><td>2.00–4.00</td><td>Passed</td></tr><tr><td>0.00</td><td>Supply / non-passed</td></tr></tbody></table></div><p class="field-help">Letter grades and course credit hours are not present in the verified source files and are therefore not invented.</p></div><div><h3>SGPA and CGPA formulas</h3><p><strong>SGPA</strong> = Σ(course grade point × course credit hours) ÷ Σ(semester credit hours)</p><p><strong>CGPA</strong> = Σ(all quality points) ÷ Σ(all attempted credit hours)</p><p>The portal displays the official supplied SGPA/CGPA values because source credit hours are unavailable.</p><details><summary>Illustrative calculation</summary><p>If two example courses both carry 3 credits with grade points 4.0 and 3.0, SGPA = (4×3 + 3×3) ÷ 6 = 3.50. This is a formula illustration, not a student record.</p></details></div></div></section>
+    <section class="shell board-section" id="about" aria-labelledby="about-title">
+      <span class="kicker">About the portal</span><h2 id="about-title">About</h2>
+      <p>This student result portal provides access to verified semester results, consolidated transcripts, class analytics, supply history, and zero-credit MZ participation records. It is designed for clear academic review across desktop and mobile devices.</p>
+      <div class="developer-credit"><strong>Created and Developed by Muhammad Arif</strong><span>BS Cyber Security, Emerson University Multan</span></div>
+    </section>
+    <section class="shell board-section" id="contact" aria-labelledby="contact-title">
+      <span class="kicker">Developer information</span><h2 id="contact-title">Contact Us</h2>
+      <dl class="contact-grid">
+        <div><dt>Developer Name</dt><dd>Muhammad Arif</dd></div><div><dt>University</dt><dd>Emerson University Multan</dd></div><div><dt>Program</dt><dd>BS Cyber Security</dd></div>
+        <div><dt>Verified GitHub</dt><dd><a href="https://github.com/ranaarifdev" target="_blank" rel="noopener noreferrer">@ranaarifdev</a></dd></div><div><dt>Email</dt><dd><a href="mailto:arifranaarif66@gmail.com">arifranaarif66@gmail.com</a></dd></div>
+      </dl>
+      <form id="feedback-form" class="feedback-form" novalidate><h3>Send feedback</h3><div class="form-grid"><label>Your name<input type="text" id="feedback-name" name="name" maxlength="80" required autocomplete="name"></label><label>Your email<input type="email" id="feedback-email" name="email" maxlength="120" required autocomplete="email"></label></div><label>Message<textarea id="feedback-message" name="message" rows="5" maxlength="1000" required></textarea></label><button class="button" type="submit">Open email draft</button><p id="feedback-status" class="form-status" role="status" aria-live="polite"></p><p class="field-help">The form does not store or transmit data. It opens your email application addressed to the developer.</p></form>
+    </section>
+    <section class="shell board-section faq-section" id="faq" aria-labelledby="faq-title">
+      <span class="kicker">Common questions</span><h2 id="faq-title">Frequently Asked Questions</h2>
+      <details><summary>How do I check a result?</summary><p>Select Check Result, enter the complete roll number, and choose Search result. Letter case and surrounding spaces are ignored.</p></details>
+      <details><summary>How do I download a transcript or result card?</summary><p>Open the student record and use its print or PDF action. In the browser print dialog, select Save as PDF for a digital copy.</p></details>
+      <details><summary>Why is a semester or value unavailable?</summary><p>The portal shows only verified source data. Missing information is not estimated or invented.</p></details>
+      <details><summary>Does MZ affect CGPA?</summary><p>No. MZ (Zero Math) is a zero-credit-hour subject and does not affect SGPA or CGPA.</p></details>
+    </section>
+    <section class="shell board-section" id="help" aria-labelledby="help-title"><span class="kicker">User guide</span><h2 id="help-title">Help</h2><div class="help-grid"><article><h3>Roll-number format</h3><p>Use the complete university roll number, such as <code>ECTE231122145</code>. Letter case and spaces are normalized.</p></article><article><h3>Browser and mobile support</h3><p>Use a current Chrome, Edge, Firefox, or Safari browser. Wide tables can be swiped horizontally on phones.</p></article><article><h3>Troubleshooting</h3><p>If offline data appears outdated, reconnect once and reload so the current service-worker cache can update.</p></article><article><h3>Contact support</h3><p>Email <a href="mailto:arifranaarif66@gmail.com">arifranaarif66@gmail.com</a> and include the roll number and a description, but do not send passwords.</p></article></div></section>
+    <section class="shell info-grid" aria-label="Portal instructions">
+      <article><span class="step">01</span><h2>Enter your roll number</h2><p>Matching ignores letter case and whitespace, but requires the full roll number.</p></article>
+      <article><span class="step">02</span><h2>Review your record</h2><p>Open each available semester or compare SGPA and CGPA in the overview.</p></article>
+      <article><span class="step">03</span><h2>Print or save</h2><p>Use the browser’s print dialog to print or save an A4 result card or transcript as PDF.</p></article>
+    </section>
+    <section class="shell privacy-summary"><h2>Your privacy matters</h2><p>No searches are sent to an external service, and this site uses no analytics or tracking. However, static data hosted publicly can be downloaded by anyone with access to the site.</p><a href="pages/privacy.html">Read the privacy notice</a></section>
+  </main>
+  <footer class="site-footer"><div class="shell board-footer"><div><strong>Created and Developed by Muhammad Arif</strong><p>BS Cyber Security – Emerson University Multan</p><small>© 2026 Muhammad Arif · Result Portal v1.4</small></div><nav aria-label="Footer"><a href="#about">About</a><a href="pages/privacy.html">Privacy Policy</a><a href="pages/terms.html">Terms of Use</a><a href="#contact">Contact</a><a href="#faq">FAQ</a><a href="pages/about.html">Developer Information</a></nav></div></footer>
+  <dialog id="methodology-dialog" class="methodology-dialog" aria-labelledby="methodology-title"><div class="dialog-heading"><h2 id="methodology-title">How These Statistics Are Calculated</h2><button type="button" id="methodology-close" aria-label="Close methodology">×</button></div><div id="methodology-content"></div></dialog>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/analytics-config.js"></script>
+  <script src="assets/js/class-analytics.js"></script>
+  <script src="assets/js/portal-sections.js"></script>
+</body>
+</html>
