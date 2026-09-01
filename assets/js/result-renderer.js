@@ -115,18 +115,49 @@
     documentNode.append(actions);
   }
 
+  function renderSupplyHistory() {
+    const supplyRecords = (state.supplyData.records || []).filter((record) => window.PortalUtils.normalizeRoll(record.rollNumber) === window.PortalUtils.normalizeRoll(state.student.rollNumber));
+    const section = U.el("div", { className: "supply-history-view" });
+    section.append(U.el("div", { className: "section-heading" }, [U.el("div", {}, [U.el("p", { className: "kicker", text: "Academic history" }), U.el("h2", { text: "Supply / Fail record" })]), U.el("p", { text: `${supplyRecords.length} subject(s) with supply or fail status` })]));
+    if (supplyRecords.length === 0) {
+      section.append(U.el("div", { className: "data-warning", text: "No supply or fail records found for this student. Student has cleared all subjects in attempted semesters." }));
+      panel.replaceChildren(section);
+      return;
+    }
+    const byStatus = {};
+    supplyRecords.forEach((record) => {
+      if (!byStatus[record.status]) byStatus[record.status] = [];
+      byStatus[record.status].push(record);
+    });
+    Object.entries(byStatus).forEach(([status, records]) => {
+      const bySemester = {};
+      records.forEach((record) => {
+        if (!bySemester[record.semesterNumber]) bySemester[record.semesterNumber] = [];
+        bySemester[record.semesterNumber].push(record);
+      });
+      const statusCard = U.el("article", { className: "supply-status-card" });
+      statusCard.append(U.el("h3", { text: status }));
+      Object.entries(bySemester).sort((a, b) => Number(a[0]) - Number(b[0])).forEach(([semNum, sems]) => {
+        const rows = sems.map((r) => [r.courseCode, r.courseTitle, r.gradePoint.toFixed(1)]);
+        statusCard.append(U.el("h4", { text: `Semester ${semNum}` }), U.el("div", { className: "table-scroll" }, resultTable(["Code", "Subject", "Grade"], rows)));
+      });
+      section.append(statusCard);
+    });
+    panel.replaceChildren(section);
+  }
+
   function activate(key, focus = false) {
     state.active = key;
     tabs.querySelectorAll("[role='tab']").forEach((tab) => { const active = tab.dataset.key === key; tab.setAttribute("aria-selected", active); tab.tabIndex = active ? 0 : -1; if (active && focus) tab.focus(); });
     panel.setAttribute("aria-labelledby", `tab-${key}`);
-    const documentActive = key !== "overview";
+    const documentActive = key !== "overview" && key !== "supply";
     document.querySelector("#print-button").hidden = !documentActive;
     document.querySelector("#download-button").hidden = !documentActive || !window.PORTAL_CONFIG.allowDownloads;
-    if (key === "overview") renderOverview(); else if (key === "transcript") window.TranscriptRenderer.render(state, panel, documentHeader, resultTable, signature, addDocumentActions); else renderSemesterHub();
+    if (key === "overview") renderOverview(); else if (key === "transcript") window.TranscriptRenderer.render(state, panel, documentHeader, resultTable, signature, addDocumentActions); else if (key === "supply") renderSupplyHistory(); else renderSemesterHub();
   }
 
   function renderTabs() {
-    const items = [{ key: "overview", label: "Overview" }, { key: "semesters", label: "Semester Result Cards" }, { key: "transcript", label: "Complete Transcript" }];
+    const items = [{ key: "overview", label: "Overview" }, { key: "semesters", label: "Semester Result Cards" }, { key: "supply", label: "Supply History" }, { key: "transcript", label: "Complete Transcript" }];
     tabs.replaceChildren();
     items.forEach((item, index) => { const button = U.el("button", { type: "button", role: "tab", id: `tab-${item.key}`, text: item.label }); button.dataset.key = item.key; button.setAttribute("aria-selected", index === 0); button.tabIndex = index === 0 ? 0 : -1; button.addEventListener("click", () => activate(item.key)); tabs.append(button); });
     tabs.addEventListener("keydown", (event) => { if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return; event.preventDefault(); const all = [...tabs.children]; let i = all.indexOf(document.activeElement); if (event.key === "Home") i = 0; else if (event.key === "End") i = all.length - 1; else i = (i + (event.key === "ArrowRight" ? 1 : -1) + all.length) % all.length; activate(all[i].dataset.key, true); });
@@ -139,18 +170,18 @@
     if (!roll) return setError("Please enter your roll number on the search page.");
     if (!U.validRoll(roll)) return setError("Invalid roll number format.");
     try {
-      const { data, index } = await window.PortalData.load();
+      const { data, index, supplyData } = await window.PortalData.load();
       const student = index.get(roll);
       if (!student) return setError("No result was found for this roll number. Please check the roll number and try again.");
-      state.student = student; state.metadata = data.metadata;
+      state.student = student; state.metadata = data.metadata; state.supplyData = supplyData;
       state.selectedSemester = student.semesters[0] ? student.semesters[0].semesterNumber : null;
       const cleanParams = new URLSearchParams({ roll: student.rollNumber });
-      if (["overview", "semesters", "transcript"].includes(requestedView)) cleanParams.set("view", requestedView);
+      if (["overview", "semesters", "supply", "transcript"].includes(requestedView)) cleanParams.set("view", requestedView);
       history.replaceState(null, "", `?${cleanParams.toString()}`);
       status.hidden = true; dashboard.hidden = false;
       document.querySelector("#authorized-notice").hidden = window.PORTAL_CONFIG.publicMode || !window.PORTAL_CONFIG.showPrivacyWarning;
       renderStudentCard(); renderTabs();
-      activate(["overview", "semesters", "transcript"].includes(requestedView) ? requestedView : "overview");
+      activate(["overview", "semesters", "supply", "transcript"].includes(requestedView) ? requestedView : "overview");
       document.title = `${student.rollNumber} Result | Emerson University Multan`;
       document.querySelector("#print-button").addEventListener("click", () => { const node = document.querySelector(".printable-document"); const suffix = state.active === "transcript" ? "Complete-Transcript" : `Semester-${state.selectedSemester}-Result-Card`; window.PortalPrint.print(node, `${student.rollNumber}-${suffix}.pdf`, false); });
       document.querySelector("#download-button").addEventListener("click", () => { const node = document.querySelector(".printable-document"); const suffix = state.active === "transcript" ? "Complete-Transcript" : `Semester-${state.selectedSemester}-Result-Card`; window.PortalPrint.print(node, `${student.rollNumber}-${suffix}.pdf`, true); });

@@ -251,3 +251,10 @@ button,input,textarea{font:inherit}
 .merit-grid .semester-rankings h4{margin:0 0 10px;color:#102a43;font-size:1rem}
 .merit-grid .semester-rankings .table-scroll{margin-top:8px}
 
+/* Supply history and fail records styling */
+.supply-history-view{min-width:0}
+.supply-status-card{background:#fff;border:1px solid #d8e0e7;border-radius:14px;padding:22px;margin-bottom:20px}
+.supply-status-card h3{color:#102a43;font-size:1.25rem;margin:0 0 16px;font-weight:700}
+.supply-status-card h4{color:#526576;font-size:1rem;margin:16px 0 12px;font-weight:600}
+.supply-status-card .table-scroll{margin-bottom:0}
+
