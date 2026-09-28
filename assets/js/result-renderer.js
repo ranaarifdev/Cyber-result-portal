@@ -21,7 +21,7 @@
       U.el("div", {}, [U.el("p", { className: "kicker", text: "Academic record" }), U.el("h1", { id: "student-name", text: s.name }), U.el("p", { className: "roll", text: s.rollNumber })])
     ]);
     const details = U.el("dl", { className: "student-details" });
-    [["Program", s.program], ["Department", s.department], ["Faculty", s.faculty], ["Session", s.session], ["Shift", s.shift], ["Current semester", s.currentSemester], ["Overall CGPA", s.overallCGPA === null ? null : U.decimal(s.overallCGPA)], ["Status", s.status], ["Father name", s.fatherName], ["Registration no.", s.registrationNumber], ["Credits earned", s.overallCreditsEarned], ["Credits registered", s.overallCreditsAttempted]].filter(([, value]) => value !== null && value !== undefined && value !== "").forEach(([label, value]) => details.append(U.definition(label, value)));
+    [["Program", s.program], ["Department", s.department], ["Faculty", s.faculty], ["Session", s.session], ["Shift", s.shift], ["Current semester", s.currentSemester], ["Overall CGPA", s.overallCGPA === null ? null : U.decimal(s.overallCGPA)], ["Status", s.status], ["Father name", s.fatherName], ["SAP ID", s.sapId], ["Registration no.", s.registrationNumber], ["Credits earned", s.overallCreditsEarned], ["Credits registered", s.overallCreditsAttempted]].filter(([, value]) => value !== null && value !== undefined && value !== "").forEach(([label, value]) => details.append(U.definition(label, value)));
     document.querySelector("#student-card").replaceChildren(heading, details);
   }
 
@@ -77,7 +77,7 @@
     const card = U.el("article", { className: "result-document semester-document printable-document", id: "print-document" });
     card.append(documentHeader("Academic Result Card"));
     const details = U.el("dl", { className: "document-details" });
-    [["Programme", `${state.student.program} (${state.student.shift})`], ["Session", state.student.session], ["Name", state.student.name], ["Roll No.", state.student.rollNumber]].forEach(([a,b]) => details.append(U.definition(a,b)));
+    [["Programme", `${state.student.program} (${state.student.shift})`], ["Session", state.student.session], ["Name", state.student.name], ["Roll No.", state.student.rollNumber], ["SAP ID", state.student.sapId]].filter(([, value]) => value !== null && value !== undefined && value !== "").forEach(([a,b]) => details.append(U.definition(a,b)));
     card.append(details, U.el("h4", { className: "semester-title", text: `${number}${ordinal(number)} Semester` }));
     const rows = sem.courses.map((c) => [c.courseCode, c.courseTitle, U.decimal(c.gradePoints)]);
     card.append(U.el("div", { className: "table-scroll" }, resultTable(["Course Code", "Subject Name", "Grade Point"], rows)));
@@ -161,12 +161,12 @@
     const initialParams = new URLSearchParams(location.search);
     const roll = U.normalizeRoll(initialParams.get("roll"));
     const requestedView = initialParams.get("view");
-    if (!roll) return setError("Please enter your roll number on the search page.");
-    if (!U.validRoll(roll)) return setError("Invalid roll number format.");
+    if (!roll) return setError("Please enter your roll number or SAP ID on the search page.");
+    if (!U.validRoll(roll)) return setError("Invalid roll number or SAP ID format.");
     try {
       const { data, index, supplyData } = await window.PortalData.load();
       const student = index.get(roll);
-      if (!student) return setError("No result was found for this roll number. Please check the roll number and try again.");
+      if (!student) return setError("No result was found for this roll number or SAP ID. Please check and try again.");
       state.student = student; state.metadata = data.metadata; state.supplyData = supplyData;
       state.selectedSemester = student.semesters[0] ? student.semesters[0].semesterNumber : null;
       const cleanParams = new URLSearchParams({ roll: student.rollNumber });

@@ -16,6 +16,10 @@ window.PortalData = Object.freeze({
     data.students.forEach((student) => {
       const roll = window.PortalUtils.normalizeRoll(student && student.rollNumber);
       if (roll && !index.has(roll)) index.set(roll, student);
+      if (student && student.sapId) {
+        const sap = String(student.sapId).trim();
+        if (sap && !index.has(sap)) index.set(sap, student);
+      }
     });
     return { data, index, supplyData };
   }

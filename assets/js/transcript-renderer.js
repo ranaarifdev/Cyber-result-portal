@@ -9,7 +9,7 @@ window.TranscriptRenderer = Object.freeze({
     headerText.append(U.el("p", { className: "transcript-program-line", text: `${student.program} (${student.shift})  |  Session: ${student.session}` }));
     doc.append(header);
     const details = U.el("dl", { className: "transcript-details" });
-    [["Name", student.name], ["Roll No.", student.rollNumber]].forEach(([a,b]) => details.append(U.definition(a,b)));
+    [["Name", student.name], ["Roll No.", student.rollNumber], ["SAP ID", student.sapId]].filter(([, value]) => value !== null && value !== undefined && value !== "").forEach(([a,b]) => details.append(U.definition(a,b)));
     doc.append(details);
     const grid = U.el("div", { className: "transcript-grid" });
     student.semesters.forEach((sem) => {

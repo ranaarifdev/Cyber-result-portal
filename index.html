@@ -30,13 +30,13 @@
         <div class="privacy-banner" data-private-notice hidden><strong>Authorized-use notice:</strong> This portal is configured for local or authorized use. Static files are not encrypted.</div>
       </div>
       <div class="search-panel" id="check-result"><form id="search-form" class="search-card" novalidate>
-        <label for="roll-number">Enter roll number</label>
+        <label for="roll-number">Enter roll number or SAP ID</label>
         <div class="search-row">
-          <input id="roll-number" name="roll" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ECTE231122145" maxlength="24" aria-describedby="roll-help search-status">
+          <input id="roll-number" name="roll" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ECTE231122145 or 3400003226" maxlength="24" aria-describedby="roll-help search-status">
           <button type="submit">Search result</button>
           <button type="reset" class="clear-button">Clear</button>
         </div>
-        <p id="roll-help" class="field-help">Example: <button class="text-button" type="button" id="use-example">ECTE231122145</button></p>
+        <p id="roll-help" class="field-help">Example: <button class="text-button" type="button" id="use-example">ECTE231122145</button> · SAP ID: <button class="text-button" type="button" id="use-sap-example">3400003226</button></p>
         <p id="search-status" class="form-status" role="status" aria-live="polite"></p>
       </form></div>
     </section>

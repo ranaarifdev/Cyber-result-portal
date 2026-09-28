@@ -13,6 +13,14 @@
     input.focus();
   });
 
+  const sapExample = document.querySelector("#use-sap-example");
+  if (sapExample) {
+    sapExample.addEventListener("click", () => {
+      input.value = "3400003226";
+      input.focus();
+    });
+  }
+
   form.addEventListener("reset", () => {
     window.setTimeout(() => {
       status.textContent = "";
@@ -27,11 +35,11 @@
     const roll = normalize(input.value);
     status.className = "form-status";
     if (!roll) {
-      status.textContent = "Please enter your roll number.";
+      status.textContent = "Please enter your roll number or SAP ID.";
       status.classList.add("error"); input.focus(); return;
     }
     if (!/^[A-Z0-9-]{6,24}$/.test(roll)) {
-      status.textContent = "Invalid roll number format.";
+      status.textContent = "Invalid roll number or SAP ID format.";
       status.classList.add("error"); input.focus(); return;
     }
     button.disabled = true;
